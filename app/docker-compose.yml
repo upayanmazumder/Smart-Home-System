@@ -1,5 +1,0 @@
-services:
-  app:
-    image: ghcr.io/upayanmazumder/smart-home-system/app:latest
-    ports:
-      - "3000:3000"
