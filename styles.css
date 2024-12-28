@@ -60,7 +60,6 @@ header .branding img {
 }
 
 header nav {
-    background-color: rgba(0, 0, 0, 0.394);
     padding: 0 var(--padding-medium);
     margin: auto 0;
 }
@@ -79,7 +78,15 @@ header nav ul span {
     border: 0.4px rgba(255, 255, 255, 0.445) solid;
 }
 
-header nav ul li a {}
+header nav ul li a {
+    background-color: rgba(4, 4, 4, 0.325);
+    padding: var(--padding-small) var(--padding-medium);
+}
+
+header nav ul li a:hover {
+    background-color: rgba(4, 4, 4, 0.445);
+    transition: background-color 0.3s ease-in-out;
+}
 
 footer {
     background-color: #333;
@@ -115,10 +122,6 @@ a {
     color: rgb(27, 120, 212);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
-}
-
-a:hover {
-    color: #1e90ff;
 }
 
 form {
@@ -172,6 +175,12 @@ button:hover {
 main {
     padding: 30px 100px;
     margin: 30px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 ::-webkit-scrollbar {
