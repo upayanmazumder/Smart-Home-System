@@ -7,6 +7,7 @@
     --body-background-color: #1f3145;
     --main-background-color: linear-gradient(135deg, rgba(0, 0, 0, 0.3), transparent, rgba(0, 0, 0, 0.4));
     --header-background-color: rgb(148 198 213 / 32%);
+    --header-initial-background-color: rgba(61, 107, 122, 0.777);
     --footer-background: #222222;
     --form-background-color: var(--glass-background-color);
     --glass-background-color: rgba(255, 255, 255, 0.2);
@@ -30,6 +31,7 @@
 
 html {
     font-size: 18px;
+    background: black;
 }
 
 body {
@@ -41,7 +43,7 @@ body {
 }
 
 header {
-    background-color: var(--header-background-color);
+    background-color: var(--header-initial-background-color);
     backdrop-filter: blur(15px);
     position: sticky;
     top: 0;
@@ -51,7 +53,19 @@ header {
     vertical-align: middle;
     padding: 0 150px;
     height: 96px;
+    animation: changeColor 2s forwards;
 }
+
+@keyframes changeColor {
+    75% {
+        background-color: var(--header-initial-background-color);
+    }
+
+    100% {
+        background-color: var(--header-background-color);
+    }
+}
+
 
 header a {
     color: white;
@@ -151,6 +165,12 @@ footer p:hover {
 
 a {
     text-decoration: none;
+    color: rgb(0, 120, 212);
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: rgb(75 160 225);
 }
 
 form {
@@ -207,13 +227,25 @@ button {
 
 button:hover {
     background-color: rgb(20 134 168 / 45%);
-    ;
 }
 
 main {
     padding: 25px 200px;
     background: var(--main-background-color);
     min-height: calc(60vh);
+    animation: slideIn 0.6s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 main h1 {
@@ -229,6 +261,10 @@ main h1 {
     flex-direction: row;
     gap: 30px;
     vertical-align: middle;
+}
+
+.hero .brand img {
+    box-shadow: 10px 10px 9px -6px #1f1f1f78;
 }
 
 .hero .info {
@@ -251,4 +287,34 @@ main h1 {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--scrollbar-hover-color);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 0 50px;
+    }
+
+    main {
+        padding: 25px 50px;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0 20px;
+    }
+
+    main {
+        padding: 25px 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
