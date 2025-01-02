@@ -6,7 +6,7 @@
 :root {
     --body-background-color: #1f3145;
     --main-background-color: linear-gradient(135deg, rgba(0, 0, 0, 0.3), transparent, rgba(0, 0, 0, 0.4));
-    --header-background-color: rgb(148 198 213 / 32%);
+    --header-background-color: rgba(148, 198, 213, 0.32);
     --header-initial-background-color: rgba(61, 107, 122, 0.777);
     --footer-background: #222222;
     --form-background-color: var(--glass-background-color);
@@ -16,17 +16,17 @@
     --scrollbar-color: rgb(88, 88, 88);
     --scrollbar-hover-color: rgb(136, 136, 136);
 
-    --padding-small: 10px;
-    --padding-medium: 15px;
-    --padding-large: 25px;
+    --padding-small: 0.625rem;
+    --padding-medium: 0.9375rem;
+    --padding-large: 1.5625rem;
 
-    --margin-small: 5px;
-    --margin-medium: 10px;
-    --margin-large: 15px;
+    --margin-small: 0.3125rem;
+    --margin-medium: 0.625rem;
+    --margin-large: 0.9375rem;
 
-    --border-radius-small: 5px;
-    --border-radius-medium: 10px;
-    --border-radius-large: 15px;
+    --border-radius-small: 0.3125rem;
+    --border-radius-medium: 0.625rem;
+    --border-radius-large: 0.9375rem;
 }
 
 html {
@@ -48,10 +48,8 @@ header {
     position: sticky;
     top: 0;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    vertical-align: middle;
-    padding: 0 150px;
+    padding: 0 8.3333%;
     height: 96px;
     animation: changeColor 2s forwards;
 }
@@ -66,31 +64,25 @@ header {
     }
 }
 
-
 header a {
     color: white;
 }
 
 header .branding {
-    vertical-align: middle;
     text-align: center;
 }
 
 header .branding a {
     color: white;
     display: flex;
-    flex-direction: row;
-    flex-basis: auto;
-    vertical-align: middle;
-    text-align: center;
+    align-items: center;
     justify-content: space-between;
 }
 
 header .branding img {
     height: 50px;
     border-radius: 50%;
-    margin: auto;
-    margin-right: 30px;
+    margin-right: 1.875rem;
     background-color: transparent;
 }
 
@@ -101,10 +93,8 @@ header nav {
 header nav ul {
     list-style: none;
     display: flex;
-    flex-direction: row;
-    padding-left: 0;
-    gap: 8px;
-    padding: var(--padding-medium) 5px;
+    gap: 1rem;
+    padding: var(--padding-medium) 0.3125rem;
     border-radius: 10dvh;
     border: outset 2px rgba(255, 255, 255, 0.25);
     background-color: var(--glass-background-color);
@@ -130,9 +120,7 @@ header nav ul li a:hover {
 
 footer {
     background: var(--footer-background);
-    bottom: 0;
     text-align: center;
-    align-items: center;
     padding: var(--padding-medium);
     height: 170px;
 }
@@ -146,7 +134,7 @@ footer a img {
     background-color: rgba(255, 255, 240, 0.4);
     padding: var(--padding-small);
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 0.3125rem;
     transition: all 0.2s ease;
 }
 
@@ -155,7 +143,7 @@ footer a img:hover {
 }
 
 footer p {
-    margin-top: 5px;
+    margin-top: 0.3125rem;
     margin-bottom: 0;
 }
 
@@ -170,16 +158,16 @@ a {
 }
 
 a:hover {
-    color: rgb(75 160 225);
+    color: rgb(75, 160, 225);
 }
 
 form {
     background-color: var(--form-background-color);
-    max-width: 400px;
+    max-width: 25rem;
     margin: 0 auto;
-    padding: 30px;
+    padding: 1.875rem;
     border: none;
-    border-radius: 35px;
+    border-radius: 2.1875rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
     border: 1px var(--body-background-color) solid;
@@ -191,15 +179,15 @@ form:hover {
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
     font-weight: 600;
     color: #ffffff;
 }
 
 input {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
+    padding: 0.75rem;
+    margin-bottom: 0.9375rem;
     border: 1px solid #ddd;
     border-radius: 10dvh;
     box-sizing: border-box;
@@ -215,24 +203,24 @@ input:focus {
 
 button {
     width: 100%;
-    padding: 12px;
+    padding: 0.75rem;
     border: none;
     border-radius: 10dvh;
-    background-color: rgb(31 155 192 / 45%);
+    background-color: rgba(31, 155, 192, 0.45);
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: rgb(20 134 168 / 45%);
+    background-color: rgba(20, 134, 168, 0.45);
 }
 
 main {
-    padding: 25px 200px;
+    padding: 1.5625rem 12.5%;
     background: var(--main-background-color);
-    min-height: calc(60vh);
+    min-height: 60vh;
     animation: slideIn 0.6s ease-in-out;
 }
 
@@ -249,26 +237,33 @@ main {
 }
 
 main h1 {
-    padding-top: 0;
     margin-top: 0;
 }
 
 .hero {
-    background-color: #5c5c5c4f;
+    background-color: rgba(92, 92, 92, 0.31);
     border-radius: var(--border-radius-large);
     padding: var(--padding-large);
     display: flex;
-    flex-direction: row;
-    gap: 30px;
-    vertical-align: middle;
+    gap: 1.875rem;
 }
 
 .hero .brand img {
-    box-shadow: 10px 10px 9px -6px #1f1f1f78;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 10px 10px 9px -6px rgba(31, 31, 31, 0.47);
+}
+
+.hero:hover .brand img {
+    box-shadow: 10px 10px 9px -6px rgba(48, 236, 236, 0.154);
 }
 
 .hero .info {
     align-self: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero:hover .info {
+    transform: translateY(-3px);
 }
 
 ::-webkit-scrollbar {
@@ -291,30 +286,30 @@ main h1 {
 
 @media (max-width: 768px) {
     header {
-        padding: 0 50px;
+        padding: 0 3.125rem;
     }
 
     main {
-        padding: 25px 50px;
+        padding: 1.5625rem 3.125rem;
     }
 
     .hero {
         flex-direction: column;
-        gap: 15px;
+        gap: 0.9375rem;
     }
 }
 
 @media (max-width: 480px) {
     header {
-        padding: 0 20px;
+        padding: 0 1.25rem;
     }
 
     main {
-        padding: 25px 20px;
+        padding: 1.5625rem 1.25rem;
     }
 
     .hero {
         flex-direction: column;
-        gap: 10px;
+        gap: 0.625rem;
     }
 }
