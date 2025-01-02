@@ -4,11 +4,13 @@
 }
 
 :root {
-    --body-background-color: #0c233d;
+    --body-background-color: #1f3145;
     --main-background-color: linear-gradient(135deg, rgba(0, 0, 0, 0.3), transparent, rgba(0, 0, 0, 0.4));
     --header-background-color: rgb(148 198 213 / 32%);
-    --footer-background-color: rgb(57, 57, 57);
-    --form-background-color: rgba(201, 201, 201, 0.3);
+    --footer-background: #222222;
+    --form-background-color: var(--glass-background-color);
+    --glass-background-color: rgba(255, 255, 255, 0.2);
+    --glass-background-hover-color: rgba(255, 255, 255, 0.3);
     --scrollbar-background-color: #14181c;
     --scrollbar-color: rgb(88, 88, 88);
     --scrollbar-hover-color: rgb(136, 136, 136);
@@ -75,6 +77,7 @@ header .branding img {
     border-radius: 50%;
     margin: auto;
     margin-right: 30px;
+    background-color: transparent;
 }
 
 header nav {
@@ -90,13 +93,13 @@ header nav ul {
     padding: var(--padding-medium) 5px;
     border-radius: 10dvh;
     border: outset 2px rgba(255, 255, 255, 0.25);
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--glass-background-color);
     box-shadow: 1px 1px 5px 2px rgba(181, 181, 181, 0.236);
     transition: all 0.15s ease-in-out;
 }
 
 header nav ul:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--glass-background-hover-color);
 }
 
 header nav ul li a {
@@ -106,12 +109,13 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background-color: #38586d8d;
+    background-color: white;
     box-shadow: 1px 1px 5px 7px rgba(181, 181, 181, 0.236);
+    color: rgba(125, 169, 182, 0.8);
 }
 
 footer {
-    background-color: var(--footer-background-color);
+    background: var(--footer-background);
     bottom: 0;
     text-align: center;
     align-items: center;
@@ -157,6 +161,12 @@ form {
     border: none;
     border-radius: 35px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    border: 1px var(--body-background-color) solid;
+}
+
+form:hover {
+    border-color: ivory;
 }
 
 label {
@@ -179,7 +189,7 @@ input {
 }
 
 input:focus {
-    border-color: #007BFF;
+    border-color: var(--header-background-color);
     outline: none;
 }
 
@@ -188,7 +198,7 @@ button {
     padding: 12px;
     border: none;
     border-radius: 10dvh;
-    background-color: #007BFF;
+    background-color: rgb(31 155 192 / 45%);
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -196,7 +206,8 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: rgb(20 134 168 / 45%);
+    ;
 }
 
 main {
