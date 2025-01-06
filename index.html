@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/counter.css">
     <title>Smart Home System</title>
 </head>
 
@@ -12,7 +13,7 @@
     <header>
         <div class="branding">
             <a href="/">
-                <img src="./media/upayan.svg" alt="Upayan">
+                <img src="./media/favicon.svg" alt="Upayan">
 
                 <h1>
                     Smart Home System
@@ -22,12 +23,15 @@
         <nav>
             <ul>
                 <li>
+                    <a href="/">
+                        Home
+                    </a>
+                </li>
+                <li>
                     <a href="/registration">
                         Signup
                     </a>
                 </li>
-                <span>
-                </span>
                 <li>
                     <a href="/login">
                         Login
@@ -42,8 +46,8 @@
         <p>Welcome to the Smart Home System</p>
         <ul class="hero">
             <div class="brand">
-
-                <img src="./media/upayan.svg" alt="Home">
+                <img src="./media/favicon.svg" alt="Home" height="400px"
+                    style="border-radius: var(--border-radius-large);">
             </div>
             <div class="info">
                 <section>
@@ -63,6 +67,23 @@
                 </section>
             </div>
         </ul>
+
+        <div class="counter-container">
+            <div class="counter">
+                <span id="usersCount">0</span>
+                <div class="label">Users</div>
+            </div>
+            <div class="counter">
+                <span id="devicesCount">0</span>
+                <div class="label">Devices</div>
+            </div>
+            <div class="counter">
+                <span id="roomsCount">0</span>
+                <div class="label">Rooms</div>
+            </div>
+        </div>
+
+
     </main>
 
     <footer>
@@ -74,6 +95,8 @@
                 src="./media/footer/linkedin.svg"></img></a>
         <p>&copy; 2024 Upayan</p>
     </footer>
+
+    <script src="./scripts//counter.js"></script>
 </body>
 
 </html>
