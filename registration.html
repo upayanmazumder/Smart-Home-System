@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Signup - Smart Home System</title>
+</head>
+
+<body>
+    <header>
+        <div class="branding">
+            <a href="/">
+                <img src="./media/favicon.svg" alt="Upayan">
+                <h1>Smart Home System</h1>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/registration">
+                        Signup
+                    </a>
+                </li>
+                <li>
+                    <a href="/login">
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Signup</h1>
+        <form action="/submit_registration" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Signup</button>
+            <a href="/login">Log into an existing account</a>
+        </form>
+    </main>
+
+    <footer>
+        <h3>Smart Home System</h3>
+        <a href="https://upayan.dev" target="_blank"><img src="./media/footer/browser.svg" alt="Browser"></a>
+        <a href="https://www.instagram.com/upayan.mazumder" target="_blank"><img src="./media/footer/instagram.svg"
+                alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/upayanmazumder" target="_blank"><img src="./media/footer/linkedin.svg"
+                alt="LinkedIn"></a>
+        <p>&copy; 2024 Upayan</p>
+    </footer>
+</body>
+
+</html>
