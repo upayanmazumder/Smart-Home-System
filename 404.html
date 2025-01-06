@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/counter.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/product-listing.css">
+    <title>Smart Home System</title>
+</head>
+
+<body>
+    <header>
+        <div class="branding">
+            <a href="/">
+                <img src="./media/favicon.svg" alt="Upayan">
+
+                <h1>
+                    Smart Home System
+                </h1>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/registration">
+                        Signup
+                    </a>
+                </li>
+                <li>
+                    <a href="/login">
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        <p>Welcome to the Smart Home System</p>
+        <ul class="hero">
+            <div class="brand">
+                <img src="./media/favicon.svg" alt="Home" height="400px"
+                    style="border-radius: var(--border-radius-large);">
+            </div>
+            <div class="info">
+                <section>
+                    <h2>Features</h2>
+                    <ul>
+                        <li>Remote control of lights and appliances</li>
+                        <li>Real-time security monitoring</li>
+                        <li>Energy usage tracking</li>
+                        <li>Voice command integration</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>How It Works</h2>
+                    <p>Our Smart Home System connects to your home network and allows you to control various devices
+                        through a user-friendly app. Simply install the app on your smartphone or tablet, and you'll be
+                        able to manage your home from anywhere in the world.</p>
+                </section>
+            </div>
+        </ul>
+
+        <div class="counter-container">
+            <div class="counter">
+                <span id="usersCount">0</span>
+                <div class="label">Users</div>
+            </div>
+            <div class="counter">
+                <span id="devicesCount">0</span>
+                <div class="label">Devices</div>
+            </div>
+            <div class="counter">
+                <span id="roomsCount">0</span>
+                <div class="label">Rooms</div>
+            </div>
+        </div>
+
+        <div class="products">
+            <h2>Products</h2>
+            <p>Some of our best-selling products!</p>
+            <div class="product-container" id="product-container"></div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Smart Home System</h3>
+        <a href="https://upayan.dev" target="_blank"><img src="./media/footer/browser.svg"></img></a>
+        <a href="https://www.instagram.com/upayan.mazumder" target="_blank"><img
+                src="./media/footer/instagram.svg"></img></a>
+        <a href="https://www.linkedin.com/in/upayanmazumder" target="_blank"><img
+                src="./media/footer/linkedin.svg"></img></a>
+        <p>&copy; 2024 Upayan</p>
+    </footer>
+
+    <script src="./scripts/counter.js"></script>
+    <script src="./scripts/product-listing.js"></script>
+</body>
+
+</html>
