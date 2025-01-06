@@ -12,6 +12,12 @@ function animateCounter(id, target) {
     }, 20);
 }
 
-animateCounter('usersCount', 2174);
-animateCounter('devicesCount', 4879);
-animateCounter('roomsCount', 1023);
+const counters = {
+    usersCount: 2174,
+    devicesCount: 4879,
+    roomsCount: 1023
+};
+
+for (const [id, target] of Object.entries(counters)) {
+    animateCounter(id, target);
+}
