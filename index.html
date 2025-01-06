@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/counter.css">
     <title>Smart Home System</title>
 </head>
 
@@ -66,6 +67,23 @@
                 </section>
             </div>
         </ul>
+
+        <div class="counter-container">
+            <div class="counter">
+                <span id="usersCount">0</span>
+                <div class="label">Users</div>
+            </div>
+            <div class="counter">
+                <span id="devicesCount">0</span>
+                <div class="label">Devices</div>
+            </div>
+            <div class="counter">
+                <span id="roomsCount">0</span>
+                <div class="label">Rooms</div>
+            </div>
+        </div>
+
+
     </main>
 
     <footer>
@@ -77,6 +95,8 @@
                 src="./media/footer/linkedin.svg"></img></a>
         <p>&copy; 2024 Upayan</p>
     </footer>
+
+    <script src="./scripts//counter.js"></script>
 </body>
 
 </html>
