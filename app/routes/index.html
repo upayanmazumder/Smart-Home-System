@@ -4,53 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="./styles/counter.css">
-    <link rel="stylesheet" href="./styles/common.css">
-    <link rel="stylesheet" href="./styles/product-listing.css">
-    <link rel="stylesheet" href="./styles/opinions.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/counter.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/product-listing.css">
+    <link rel="stylesheet" href="../styles/opinions.css">
     <title>Smart Home System</title>
 </head>
 
 <body>
-    <header>
-        <div class="branding">
-            <a href="/">
-                <img src="./media/favicon.svg" alt="Upayan">
-
-                <h1>
-                    Smart Home System
-                </h1>
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="/registration">
-                        Signup
-                    </a>
-                </li>
-                <li>
-                    <a href="/login">
-                        Login
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header"></div>
 
     <main>
         <h1>Home</h1>
         <p>Welcome to the Smart Home System</p>
         <ul class="hero">
             <div class="brand">
-                <img src="./media/favicon.svg" alt="Home" height="400px"
-                    style="border-radius: var(--border-radius-large);">
+                <img src="./favicon.ico" alt="Home" height="400px" style="border-radius: var(--border-radius-large);">
             </div>
             <div class="info">
                 <section>
@@ -97,17 +67,17 @@
             <p>What they say about us..</p>
             <div class="opinion-container">
                 <div class="opinion-card">
-                    <img src="./media/opinions/javier-bardem.jpg" alt="John Doe">
+                    <img src="../media/opinions/javier-bardem.jpg" alt="John Doe">
                     <h3>Javier Bardem</h3>
                     <p>"This smart home system has made my life so much easier. Highly recommend it!"</p>
                 </div>
                 <div class="opinion-card">
-                    <img src="./media/opinions/pablo-escobar.jpg" alt="Jane Smith">
+                    <img src="../media/opinions/pablo-escobar.jpg" alt="Jane Smith">
                     <h3>Pablo Escobar</h3>
                     <p>"I love the automation features. They save me so much time every day!"</p>
                 </div>
                 <div class="opinion-card">
-                    <img src="./media/opinions/harshad-mehta.jpg" alt="Chris Brown">
+                    <img src="../media/opinions/harshad-mehta.jpg" alt="Chris Brown">
                     <h3>Harshad Mehta</h3>
                     <p>"A game changer for my family. The security features are top-notch."</p>
                 </div>
@@ -115,18 +85,11 @@
         </div>
     </main>
 
-    <footer>
-        <h3>Smart Home System</h3>
-        <a href="https://upayan.dev" target="_blank"><img src="./media/footer/browser.svg"></img></a>
-        <a href="https://www.instagram.com/upayan.mazumder" target="_blank"><img
-                src="./media/footer/instagram.svg"></img></a>
-        <a href="https://www.linkedin.com/in/upayanmazumder" target="_blank"><img
-                src="./media/footer/linkedin.svg"></img></a>
-        <p>&copy; 2024 Upayan</p>
-    </footer>
+    <div id="footer"></div>
 
     <script src="./scripts/counter.js"></script>
     <script src="./scripts/product-listing.js"></script>
+    <script src="../scripts/common.js"></script>
 </body>
 
 </html>
