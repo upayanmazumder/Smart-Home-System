@@ -1,0 +1,27 @@
+.counter-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.counter-container:hover {
+    cursor: default;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(133, 133, 133, 0.425);
+    height: 80px;
+    width: 80px;
+    text-align: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(219, 219, 219, 0.425);
+    transition: all 0.2s ease-in-out;
+}
+
+.counter-container:hover .counter {
+    box-shadow: 0 0 0 9px rgba(237, 237, 237, 0.425);
+}

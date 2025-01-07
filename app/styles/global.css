@@ -47,10 +47,17 @@ body {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
     background: var(--main-background);
     margin: var(--margin-large) var(--screen-horizontal-margin);
     padding: var(--padding-small) var(--padding-large);
     min-height: 60vh;
+}
+
+section {
+    margin: 50px 0;
+    scroll-margin-top: 150px;
 }
 
 h1,
