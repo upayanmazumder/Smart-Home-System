@@ -26,5 +26,5 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build app --tag ghcr.io/upayanmazumder/smart-home-system-app:latest --build-arg NODE_ENV=production
-          docker push ghcr.io/upayanmazumder/smart-home-system-app:latest
+          docker build app --tag ghcr.io/upayanmazumder/smart-home-system/app:latest --build-arg NODE_ENV=production
+          docker push ghcr.io/upayanmazumder/smart-home-system/app:latest
