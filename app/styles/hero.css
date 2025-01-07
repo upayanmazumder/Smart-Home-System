@@ -8,177 +8,152 @@
     margin: 0 !important;
 }
 
-.hero button {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 13rem;
-    overflow: hidden;
-    height: 3rem;
-    background-size: 300% 300%;
-    cursor: pointer;
-    backdrop-filter: blur(1rem);
-    border-radius: 5rem;
-    transition: 0.5s;
-    animation: gradient_301 5s ease infinite;
-    border: double 4px transparent;
-    background-image: linear-gradient(#212121, #212121),
-        linear-gradient(137.48deg,
-            #ffdb3b 10%,
-            #fe53bb 45%,
-            #8f51ea 67%,
-            #0044ff 87%) !important;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-}
-
-#container-stars {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    transition: 0.5s;
-    backdrop-filter: blur(1rem);
-    border-radius: 5rem;
-}
-
-strong {
-    z-index: 2;
-    font-size: 12px;
-    letter-spacing: 5px;
-    color: #ffffff;
-    text-shadow: 0 0 4px white;
-}
-
-#glow {
-    position: absolute;
-    display: flex;
-    width: 12rem;
-}
-
-.circle {
-    width: 100%;
-    height: 30px;
-    filter: blur(2rem);
-    animation: pulse_3011 4s infinite;
-    z-index: -1;
-}
-
-.circle:nth-of-type(1) {
-    background: rgba(254, 83, 186, 0.636);
-}
-
-.circle:nth-of-type(2) {
-    background: rgba(142, 81, 234, 0.704);
-}
-
-.hero button:hover #container-stars {
-    z-index: 1;
-    background-color: #212121;
-}
-
-.hero button:hover {
-    transform: scale(1.1);
-}
-
-.hero button:active {
-    border: double 4px #fe53bb;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    animation: none;
-}
-
-.hero button:active .circle {
-    background: #fe53bb;
-}
-
-#stars {
+button {
     position: relative;
+    padding: 12px 35px;
+    background: #1e90ff;
+    font-size: 17px;
+    font-weight: 500;
+    color: #181818;
+    border: 3px solid #1e90ff;
+    border-radius: 8px;
+    box-shadow: 0 0 0 #1e90ff8c;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.star-1 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 0 #fffdef);
+    z-index: -5;
+    transition: all 0.8s ease;
+}
+
+button:hover {
     background: transparent;
-    width: 200rem;
-    height: 200rem;
+    color: #1e90ff;
+    box-shadow: 0 0 25px #1e90ff8c;
 }
 
-#stars::after {
-    content: "";
+button:hover .star-1 {
     position: absolute;
-    top: -10rem;
-    left: -100rem;
-    width: 100%;
-    height: 100%;
-    animation: animStarRotate 90s linear infinite;
+    top: -80%;
+    left: -30%;
+    width: 25px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
 }
 
-#stars::after {
-    background-image: radial-gradient(#ffffff 1px, transparent 1%);
-    background-size: 50px 50px;
-}
-
-#stars::before {
-    content: "";
+button:hover .star-2 {
     position: absolute;
-    top: 0;
-    left: -50%;
-    width: 170%;
-    height: 500%;
-    animation: animStar 60s linear infinite;
+    top: -25%;
+    left: 10%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
 }
 
-#stars::before {
-    background-image: radial-gradient(#ffffff 1px, transparent 1%);
-    background-size: 50px 50px;
-    opacity: 0.5;
+button:hover .star-3 {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
 }
 
-@keyframes animStar {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-135rem);
-    }
+button:hover .star-4 {
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    width: 8px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
 }
 
-@keyframes animStarRotate {
-    from {
-        transform: rotate(360deg);
-    }
-
-    to {
-        transform: rotate(0);
-    }
+button:hover .star-5 {
+    position: absolute;
+    top: 25%;
+    left: 115%;
+    width: 15px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
 }
 
-@keyframes gradient_301 {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+button:hover .star-6 {
+    position: absolute;
+    top: 5%;
+    left: 60%;
+    width: 5px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #fffdef);
+    z-index: 2;
 }
 
-@keyframes pulse_3011 {
-    0% {
-        transform: scale(0.75);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-    }
-
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-    }
-
-    100% {
-        transform: scale(0.75);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-    }
+.fil0 {
+    fill: #fffdef;
 }
