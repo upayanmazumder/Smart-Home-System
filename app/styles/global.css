@@ -50,8 +50,7 @@ main {
     display: flex;
     flex-direction: column;
     background: var(--main-background);
-    margin: var(--margin-large) var(--screen-horizontal-margin);
-    padding: var(--padding-small) var(--padding-large);
+    margin: 0 var(--screen-horizontal-margin);
     min-height: 60vh;
 }
 
