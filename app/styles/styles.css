@@ -10,6 +10,7 @@ header {
     top: 0;
     backdrop-filter: blur(15px);
     transition: box-shadow 0.3s;
+    z-index: 1000;
 }
 
 header:hover {
@@ -95,6 +96,45 @@ header nav ul li:hover a {
 .heading {
     padding-left: var(--padding-large);
     margin-bottom: var(--margin-medium);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: calc(var(--screen-horizontal-margin) - calc(2*var(--padding-large)));
+    width: fit-content;
+    height: max-content;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 20px 35px 25px 20px;
+    box-sizing: border-box;
+    z-index: 999;
+    margin-top: 130px;
+    border-radius: 0 0 50px 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar a {
+    color: #838383;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: white;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
 }
 
 footer {
