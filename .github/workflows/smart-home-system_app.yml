@@ -1,4 +1,4 @@
-name: Docker Image CI for html.nodejs.dj.upayan.dev
+name: Docker Image CI for smart-home-system
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 permissions:
   contents: read
-  packages: write
+  packages: dockrite
 
 jobs:
   build:

@@ -1,5 +1,5 @@
 services:
-  web:
-    image: ghcr.io/upayanmazumder/devjourney/html-nodejs/web:latest
+  app:
+    image: ghcr.io/upayanmazumder/smart-home-system/app:latest
     ports:
       - "3000:3000"

@@ -4,18 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/common.css">
     <title>Signup - Smart Home System</title>
 </head>
 
 <body>
-    <div id="header"></div>
+    <header>
+        <div class="branding">
+            <a href="/">
+                <img src="./favicon.ico" alt="Upayan">
+                <h1>Smart Home System</h1>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/registration">
+                        Signup
+                    </a>
+                </li>
+                <li>
+                    <a href="/login">
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <h1>Signup</h1>
-        <form action="/submit_registration" method="post">
-            <label for="username">Username</label>
+        <form>
             <input type="text" id="username" name="username" required>
             <br>
             <label for="email">Email</label>
@@ -29,9 +54,15 @@
         </form>
     </main>
 
-    <div id="footer"></div>
-
-    <script src="../scripts/common.js"></script>
+    <footer>
+        <h3>Smart Home System</h3>
+        <a href="https://upayan.dev" target="_blank"><img src="../media/footer/browser.svg"></img></a>
+        <a href="https://www.instagram.com/upayan.mazumder" target="_blank"><img
+                src="../../media/footer/instagram.svg"></img></a>
+        <a href="https://www.linkedin.com/in/upayanmazumder" target="_blank"><img
+                src="./media/footer/linkedin.svg"></img></a>
+        <p>&copy; 2024 Upayan</p>
+    </footer>
 </body>
 
 </html>
