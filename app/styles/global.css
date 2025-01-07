@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'RedHatDisplay';
+    src: url('./fonts/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --body-background-color: #101010;
+    --main-background: transparent;
+    --header-background-color: #2424242d;
+    --header-initial-background-color: #1c1c1c;
+    --footer-background: #0a0a0a;
+    --form-background-color: var(--glass-background-color);
+    --glass-background-color: rgba(255, 255, 255, 0.2);
+    --glass-background-hover-color: rgba(255, 255, 255, 0.3);
+    --scrollbar-background-color: #14181c;
+    --scrollbar-color: rgb(88, 88, 88);
+    --scrollbar-hover-color: rgb(136, 136, 136);
+
+    --text-color: #ffffff;
+    --link-text: #1E90FF;
+    --link-hover-text: #00BFFF;
+    --padding-small: 0.625rem;
+    --padding-medium: 0.9375rem;
+    --padding-large: 1.5625rem;
+
+    --margin-small: 0.3125rem;
+    --margin-medium: 0.625rem;
+    --margin-large: 0.9375rem;
+
+    --border-radius-small: 0.3125rem;
+    --border-radius-medium: 0.625rem;
+    --border-radius-large: 0.9375rem;
+
+    --screen-horizontal-margin: 200px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body-background-color);
+    color: var(--text-color);
+    font-family: 'RedHatDisplay', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background: var(--main-background);
+    margin: var(--margin-large) var(--screen-horizontal-margin);
+    padding: var(--padding-small) var(--padding-large);
+    min-height: 60vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color);
+    margin: var(--margin-medium) 0;
+}
+
+p {
+    margin: var(--margin-medium) 0;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    color: var(--link-text);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--link-hover-text);
+}
