@@ -113,6 +113,9 @@ main {
     background: var(--main-background-color);
     min-height: 60vh;
     animation: slideIn 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 @keyframes slideIn {
