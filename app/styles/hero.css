@@ -1,0 +1,9 @@
+.hero {
+    background-color: rgba(0, 0, 0, 0.568);
+    padding: var(--padding-large) calc(3*var(--padding-large));
+    display: flex;
+    flex-direction: row;
+    gap: var(--padding-large);
+    height: 60vh;
+    align-items: center;
+}

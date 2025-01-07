@@ -9,6 +9,11 @@ header {
     position: sticky;
     top: 0;
     backdrop-filter: blur(15px);
+    transition: box-shadow 0.3s;
+}
+
+header:hover {
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.295);
 }
 
 @keyframes changeColor {
@@ -25,11 +30,18 @@ header a {
     color: rgb(185 184 184);
 }
 
+header .branding {
+    background-color: var(--glass-background-color);
+    padding-right: var(--padding-large);
+    border-radius: 50px 40px 20px 50px;
+}
+
 header .branding a {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 30px;
+    font-family: Verdana;
 }
 
 header .branding a img {
@@ -60,7 +72,7 @@ header nav ul {
 }
 
 header nav ul:hover {
-    box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.295);
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.295);
 }
 
 header nav ul li {
@@ -73,11 +85,16 @@ header nav ul li {
 header nav ul li:hover {
     background-color: var(--glass-background-hover-color);
     border-radius: 10dvh;
-    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.229);
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
 }
 
 header nav ul li:hover a {
     color: rgb(81, 81, 81);
+}
+
+.heading {
+    padding-left: var(--padding-large);
+    margin-bottom: var(--margin-medium);
 }
 
 footer {
