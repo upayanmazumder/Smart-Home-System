@@ -13,9 +13,7 @@
     --form-background-color: rgba(30, 30, 30, 0.7);
     --glass-background-color: rgba(255, 255, 255, 0.07);
     --glass-background-hover-color: rgba(255, 255, 255, 0.1);
-    --scrollbar-background-color: var(--body-background-color);
-    --scrollbar-color: rgb(88, 88, 88);
-    --scrollbar-hover-color: rgb(136, 136, 136);
+    --scrollbar-background-color: #0b0b0b;
 
     --text-color: #ffffff;
     --link-text: #1E90FF;
@@ -225,7 +223,7 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-    background: #000;
+    background: var(--scrollbar-background-color);
     border-radius: 10px;
 }
 
