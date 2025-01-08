@@ -20,7 +20,6 @@
         <div class="branding">
             <a href="/">
                 <img src="../media/icon.png" alt="Upayan" height="80px" width="80px">
-                <h1>Homy</h1>
             </a>
         </div>
         <nav>
@@ -31,11 +30,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/signup">
-                        Signup
-                    </a>
-                </li>
-                <li>
                     <a href="/login">
                         Login
                     </a>
@@ -43,14 +37,6 @@
             </ul>
         </nav>
     </header>
-
-    <aside class="sidebar">
-        <nav class="sidebar-menu">
-            <a href="/#hero" class="menu-item">Home</a>
-            <a href="/#products" class="menu-item">Product</a>
-            <a href="/#opinions" class="menu-item">Opinions</a>
-        </nav>
-    </aside>
 
     <main>
         <div class="ellipsis" style="top: 50px;right: 50px;">
@@ -183,9 +169,9 @@
         <div class="ellipsis ellipsis-red" style="top: 700px;left: 0px;">
         </div>
         <section id="products">
-            <div>
+            <div style="padding-top: 5px;">
                 <h2>Products</h2>
-                <p>Some of our best-selling products!</p>
+                <p style="margin-bottom: 30px;">Some of our best-selling products!</p>
                 <div class="product-container">
                     <div class="product">
                         <ul>
@@ -242,21 +228,21 @@
                 <h2>Opinions</h2>
                 <p>What they say about us..</p>
                 <div class="opinion-container">
-                    <div class="opinion-card">
+                    <div class="opinion-card" style="align-self: flex-start;">
                         <div class="opinion-card-header">
                             <img src="../media/opinions/javier-bardem.webp" alt="Javier Bardem">
                             <h3>Javier Bardem</h3>
                         </div>
                         <p>"This smart home system has made my life so much easier. Highly recommend it!"</p>
                     </div>
-                    <div class="opinion-card">
+                    <div class="opinion-card target" style="align-self: flex-end;">
                         <div class="opinion-card-header">
                             <img src="../media/opinions/pablo-escobar.webp" alt="Pablo Escobar">
                             <h3>Pablo Escobar</h3>
                         </div>
                         <p>"I love the automation features. They save me so much time every day!"</p>
                     </div>
-                    <div class="opinion-card">
+                    <div class="opinion-card" style="align-self: flex-start;">
                         <div class="opinion-card-header">
                             <img src="../media/opinions/harshad-mehta.webp" alt="Harshad Mehta">
                             <h3>Harshad Mehta</h3>
@@ -276,7 +262,8 @@
                     <h3>Company</h3>
                     <a href="https://upayan.dev" target="_blank">About Us</a>
                     <a href="https://upayan.dev" target="_blank">Blog</a>
-                    <a href="https://upayan.dev" target="_blank">Contact</a>
+                    <a href="/p/terms-of-service">Terms of Service</a>
+                    <a href="/p/privacy-policy">Privacy Policy</a>
                     <a href="mailto:support.homy@upayan.dev">Support</a>
                 </div>
                 <div class="footer-column">

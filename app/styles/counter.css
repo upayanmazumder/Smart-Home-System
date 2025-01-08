@@ -22,14 +22,14 @@
     justify-content: center;
     border-radius: 50%;
     border: 8px rgb(45 45 45 / 85%) solid;
-    transition: border 0.2s ease-in-out, box-shadow 0.4s ease-in;
+    transition: all 0.6s ease-in-out;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 0.8em;
 }
 
 .counter-container:hover .counter {
     border-color: rgb(45, 45, 45);
-    box-shadow: 0 0 6px 3px rgba(124, 18, 181, 0.202);
+    box-shadow: rgb(231 128 18 / 36%) 0px 0px 12px 4px;
 }
 
 @media (max-width: 768px) {

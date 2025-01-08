@@ -19,6 +19,16 @@
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.opinion-card.target {
+    padding-left: 100px;
+}
+
+@media (max-width: 480px) {
+    .opinion-card.target {
+        padding-left: 50px;
+    }
+}
+
 .opinion-card p {
     text-align: left !important;
 }
