@@ -31,3 +31,27 @@
     border-color: rgb(45, 45, 45);
     box-shadow: 0 0 6px 3px rgba(124, 18, 181, 0.202);
 }
+
+@media (max-width: 768px) {
+    .counter-container {
+        max-width: 90vw;
+    }
+
+    .counter {
+        height: 60px;
+        width: 60px;
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-container {
+        max-width: 100vw;
+    }
+
+    .counter {
+        height: 50px;
+        width: 50px;
+        font-size: 0.6em;
+    }
+}

@@ -58,6 +58,12 @@ html {
     overflow-x: hidden;
 }
 
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
 body {
     background-color: var(--body-background-color);
     color: var(--text-color);
