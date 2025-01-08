@@ -70,6 +70,7 @@ header nav ul {
     background-color: var(--glass-background-color);
     border-radius: 50dvh;
     transition: box-shadow 0.3s;
+    height: 100%;
 }
 
 header nav ul:hover {
@@ -77,20 +78,20 @@ header nav ul:hover {
 }
 
 header nav ul li {
-    display: inline;
+    padding: var(--padding-small) 0;
+}
+
+header nav ul li a {
     padding: var(--padding-small);
     transition: background-color 0.1s ease;
     border-radius: 10dvh;
 }
 
-header nav ul li:hover {
+header nav ul li:hover a {
+    color: rgb(81, 81, 81);
     background-color: var(--glass-background-hover-color);
     border-radius: 10dvh;
     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
-}
-
-header nav ul li:hover a {
-    color: rgb(81, 81, 81);
 }
 
 .heading {
