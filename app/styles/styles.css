@@ -1,3 +1,5 @@
+/* Header */
+
 header {
     padding: var(--padding-medium) var(--screen-horizontal-margin);
     display: flex;
@@ -94,11 +96,14 @@ header nav ul li:hover a {
     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
 }
 
+/* Page Heading */
 .heading {
+    /* Page heading is skipped on home page for allowing hero to take maximum space */
     padding-left: var(--padding-large);
     margin-bottom: var(--margin-medium);
 }
 
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
@@ -138,6 +143,8 @@ header nav ul li:hover a {
     margin-bottom: 15px;
 }
 
+/* Footer */
+
 .footer {
     background: var(--footer-background);
     padding: var(--padding-medium) var(--screen-horizontal-margin);
@@ -174,6 +181,7 @@ header nav ul li:hover a {
 
 .footer-column a:hover {
     color: #ffffff;
+    text-decoration: underline;
 }
 
 .footer-bottom {
@@ -181,12 +189,12 @@ header nav ul li:hover a {
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #333333;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 .social-media a {
     margin-right: 15px;
-    color: #bbbbbb;
+    color: #bbbbbbd0;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s;
@@ -197,16 +205,27 @@ header nav ul li:hover a {
 }
 
 .footer-buttons button {
-    background-color: #333333;
-    color: #ffffff;
     border: none;
-    padding: 8px 16px;
     margin-left: 10px;
-    cursor: pointer;
-    border-radius: 4px;
+    border-radius: 10dvh;
     transition: background-color 0.3s;
 }
 
-.footer-buttons button:hover {
-    background-color: #555555;
+#footer-joinNow-button {
+    background-color: #333333;
+    color: azure;
+}
+
+#footer-joinNow-button:hover {
+    background-color: #404040;
+}
+
+#footer-getInTouch-button {
+    background-color: #ffffff;
+    color: #333333;
+    transition: all 0.2s ease-in-out;
+}
+
+#footer-getInTouch-button:hover {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.14);
 }

@@ -172,6 +172,10 @@ a:hover {
     color: var(--link-hover-text);
 }
 
+button {
+    padding: var(--padding-small) var(--padding-medium);
+}
+
 ::-webkit-scrollbar {
     width: 8px;
     background-color: var(--scrollbar-background-color);

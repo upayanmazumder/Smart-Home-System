@@ -13,7 +13,7 @@
     border-radius: var(--border-radius-large);
 }
 
-button {
+.hero button {
     position: relative;
     padding: 12px 35px;
     background: #1e90ff;
@@ -94,13 +94,13 @@ button {
     transition: all 0.8s ease;
 }
 
-button:hover {
+.hero button:hover {
     background: transparent;
     color: #1e90ff;
     box-shadow: 0 0 25px #1e90ff8c;
 }
 
-button:hover .star-1 {
+.hero button:hover .star-1 {
     position: absolute;
     top: -80%;
     left: -30%;
@@ -110,7 +110,7 @@ button:hover .star-1 {
     z-index: 2;
 }
 
-button:hover .star-2 {
+.hero button:hover .star-2 {
     position: absolute;
     top: -25%;
     left: 10%;
@@ -120,7 +120,7 @@ button:hover .star-2 {
     z-index: 2;
 }
 
-button:hover .star-3 {
+.hero button:hover .star-3 {
     position: absolute;
     top: 55%;
     left: 25%;
@@ -130,7 +130,7 @@ button:hover .star-3 {
     z-index: 2;
 }
 
-button:hover .star-4 {
+.hero button:hover .star-4 {
     position: absolute;
     top: 30%;
     left: 80%;
@@ -140,7 +140,7 @@ button:hover .star-4 {
     z-index: 2;
 }
 
-button:hover .star-5 {
+.hero button:hover .star-5 {
     position: absolute;
     top: 25%;
     left: 115%;
@@ -150,7 +150,7 @@ button:hover .star-5 {
     z-index: 2;
 }
 
-button:hover .star-6 {
+.hero button:hover .star-6 {
     position: absolute;
     top: 5%;
     left: 60%;
