@@ -1,6 +1,6 @@
 {
-    "name": "Smart Home System",
-    "short_name": "SmartHome",
+    "name": "AetherLink",
+    "short_name": "AetherLink",
     "start_url": "/",
     "display": "fullscreen",
     "background_color": "#000000",
