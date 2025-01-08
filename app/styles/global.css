@@ -49,7 +49,7 @@
 
 @media (max-width: 480px) {
     :root {
-        --screen-horizontal-margin: 20px;
+        --screen-horizontal-margin: px;
     }
 }
 
