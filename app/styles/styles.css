@@ -88,7 +88,7 @@ header nav ul li a {
 }
 
 header nav ul li:hover a {
-    color: rgb(81, 81, 81);
+    color: rgb(71, 71, 71);
     background-color: var(--glass-background-hover-color);
     border-radius: 10dvh;
     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
