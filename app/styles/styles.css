@@ -1,5 +1,4 @@
 /* Header */
-
 header {
     padding: var(--padding-medium) var(--screen-horizontal-margin);
     display: flex;
@@ -96,6 +95,16 @@ header nav ul li:hover a {
     box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
 }
 
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+    }
+
+    header .branding {
+        display: none;
+    }
+}
+
 /* Page Heading */
 .heading {
     /* Page heading is skipped on home page for allowing hero to take maximum space */
@@ -117,6 +126,12 @@ header nav ul li:hover a {
     overflow-y: hidden;
     align-items: center;
     display: flex;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
 }
 
 .sidebar-menu {
@@ -149,6 +164,22 @@ header nav ul li:hover a {
     background: var(--footer-background);
     padding: var(--padding-medium) var(--screen-horizontal-margin);
 }
+
+@media (max-width: 1000px) {
+    .footer button {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer button {
+        font-size: 0.5rem;
+        padding: 0.8em;
+    }
+}
+
+@media (max-width: 590px) {}
+
 
 .footer-container {
     max-width: 1200px;

@@ -3,9 +3,16 @@
     display: flex;
     flex-direction: row;
     gap: 60px;
-    height: 60vh;
+    min-height: 60vh;
     align-items: center;
     margin: 0 !important;
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
 
 .hero .brand img {
