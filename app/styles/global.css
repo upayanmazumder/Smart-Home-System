@@ -10,7 +10,7 @@
     --header-initial-background-color: #1c1c1c;
     --footer-background: transparent;
     --sidebar-background-color: rgba(30, 30, 30, 0.9);
-    --form-background-color: rgba(30, 30, 30, 0.9);
+    --form-background-color: rgba(30, 30, 30, 0.7);
     --glass-background-color: rgba(255, 255, 255, 0.2);
     --glass-background-hover-color: rgba(255, 255, 255, 0.3);
     --scrollbar-background-color: var(--body-background-color);
