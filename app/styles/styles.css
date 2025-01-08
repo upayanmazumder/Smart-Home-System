@@ -8,7 +8,7 @@ header {
     animation: changeColor 1s forwards;
     position: sticky;
     top: 0;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(50px);
     transition: box-shadow 0.3s;
     z-index: 1000;
 }

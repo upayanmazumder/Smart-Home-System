@@ -4,9 +4,9 @@
 }
 
 :root {
-    --body-background-color: #101010;
+    --body-background-color: #060606;
     --main-background: transparent;
-    --header-background-color: #2424242d;
+    --header-background-color: #00000050;
     --header-initial-background-color: #1c1c1c;
     --footer-background: #0a0a0a;
     --form-background-color: var(--glass-background-color);
@@ -81,7 +81,6 @@ section {
 .container.container-spacing-xl {
     padding: 4px 10px;
 }
-
 
 /* DESIGN --------------------------------------- */
 .ellipsis {
