@@ -229,3 +229,17 @@ header nav ul li:hover a {
 #footer-getInTouch-button:hover {
     box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.14);
 }
+
+#go-top {
+    background-color: #1e1e1e77;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+#go-top:hover {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.171);
+}
+
+#go-top:active {
+    transform: scale(0.95);
+}
