@@ -79,6 +79,14 @@ main {
     margin: 0 var(--screen-horizontal-margin);
     min-height: 60vh;
     overflow: hidden;
+    padding-bottom: 100px;
+}
+
+@media (max-width: 768) {
+    main {
+        padding-bottom: 50px;
+    }
+
 }
 
 section {
