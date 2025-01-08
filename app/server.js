@@ -11,6 +11,8 @@ const server = http.createServer((req, res) => {
     let filePath = '.' + req.url;
     if (filePath === './') {
         filePath = './routes/index.html';
+    } else if (filePath.startsWith('./manifest.json')) {
+        filePath = './public/manifest.json';
     } else if (filePath.startsWith('./public')) {
         filePath = './public' + req.url.slice(7);
     } else if (filePath.startsWith('./media')) {
