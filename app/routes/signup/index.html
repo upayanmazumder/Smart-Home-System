@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="icon" href="../public/favicon.ico" type="image/x-icon">
-    <title>404 - Not Found</title>
+    <link rel="stylesheet" href="../../styles/global.css">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/form.css">
+    <link rel="icon" href="../../public/favicon.ico" type="image/x-icon">
+    <title>Homy - Signup</title>
 </head>
 
 <body>
     <header>
         <div class="branding">
             <a href="/">
-                <img src="../media/icon.png" alt="Upayan" height="80px" width="80px">
+                <img src="../../media/icon.png" alt="Upayan" height="80px" width="80px">
                 <h1>Homy</h1>
             </a>
         </div>
@@ -41,12 +42,28 @@
 
     <main>
         <div class="heading">
-            <h1>404</h1>
-            <p>Sorry, the page you are looking for does not exist.</p>
-            <a href="/">Click here to return to the homepage</a>
+            <h1>Sign Up</h1>
+            <p>Create an account to get started</p>
         </div>
-        <div class="ellipsis ellipsis-green" style="top: 50px;right: 50px;"></div>
-        <img src="../media/404.jpg" alt="404" style="max-height: 60vh; width: 60vw;align-self: center;">
+        <div class="ellipsis ellipsis-blue" style="top: -40px;left: -70px;"></div>
+        <div class="container container-center">
+            <div class="form-container">
+                <h2 class="form-heading">Sign Up</h2>
+                <form>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <br>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <br>
+                    <button type="submit">Signup</button>
+                    <p>Already have an account?<a href="/login">Sign in</a></p>
+                </form>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">

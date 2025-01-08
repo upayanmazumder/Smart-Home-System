@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/global.css">
     <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/form.css">
     <link rel="icon" href="../../public/favicon.ico" type="image/x-icon">
-    <title>Login - Homy</title>
+    <title>Homy - Login</title>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/registration">
+                    <a href="/signup">
                         Signup
                     </a>
                 </li>
@@ -44,32 +45,75 @@
             <h1>Log in</h1>
             <p>Login to your Homy account</p>
         </div>
-        <form>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <button type="submit">Login</button>
-            <a href="/registration">Don't have an account yet? Sign up!</a>
-        </form>
+        <div class="ellipsis ellipsis-blue" style="top: -40px;left: -70px;"></div>
+        <div class="container container-center">
+            <div class="form-container">
+                <h2 class="form-heading">Log in</h2>
+                <form>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <br>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <br>
+                    <button type="submit">Login</button>
+                    <p>
+                        New here?
+                        <a href="/login">
+                            Sign up
+                        </a>
+                        <br>
+                        Forgot your password?
+                        <a href="/forgot-password">
+                            Reset your password
+                        </a>
+                    </p>
+                </form>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <h3>Homy</h3>
-        <ul class="social-links">
-            <a href="https://upayan.dev" target="_blank">
-                <img src="../../media/footer/browser.png"></img>
-            </a>
-            <a href="https://www.instagram.com/upayan.mazumder" target="_blank">
-                <img src="../../media/footer/instagram.png"></img>
-            </a>
-            <a href="https://www.linkedin.com/in/upayanmazumder" target="_blank">
-                <img src="../../media/footer/linkedin.png"></img>
-            </a>
-        </ul>
-        <p>&copy; 2024 Upayan</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="https://upayan.dev">About Us</a>
+                    <a href="https://upayan.dev">Blog</a>
+                    <a href="https://upayan.dev">Contact</a>
+                    <a href="mailto:support.homy@upayan.dev">Support</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <a href="/#products">Features</a>
+                    <a href="/#products">Pricing</a>
+                    <a href="/#products">Integrations</a>
+                    <a href="/#products">API</a>
+                    <a href="/#products">Demo</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <a href="https://upayan.dev">Help Center</a>
+                    <a href="https://upayan.dev">Documentation</a>
+                    <a href="https://upayan.dev">Community</a>
+                    <a href="https://upayan.dev">Security</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-media">
+                    <a href="https://www.facebook.com/upayan.mazumder"><i class="icon">Facebook</i></a>
+                    <a href="https://github.com/upayanmazumder"><i class="icon">Github</i></a>
+                    <a href="https://www.instagram.com/upayan.mazumder/"><i class="icon">Instagram</i></a>
+                    <a href="https://www.linkedin.com/in/upayanmazumder/"><i class="icon">LinkedIn</i></a>
+                </div>
+                <div class="footer-buttons">
+                    <button id="footer-joinNow-button">Join now</button>
+                    <button id="footer-getInTouch-button">Get in touch</button>
+                    <button id="go-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+                </div>
+            </div>
+        </div>
+        </div>
     </footer>
 </body>
 

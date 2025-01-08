@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/registration">
+                    <a href="/signup">
                         Signup
                     </a>
                 </li>
@@ -45,11 +45,11 @@
     </header>
 
     <aside class="sidebar">
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#opinions">Opinions</a></li>
-        </ul>
+        <nav class="sidebar-menu">
+            <a href="/#hero" class="menu-item">Home</a>
+            <a href="/#products" class="menu-item">Product</a>
+            <a href="/#opinions" class="menu-item">Opinions</a>
+        </nav>
     </aside>
 
     <main>
@@ -80,7 +80,7 @@
                             able to manage your home from anywhere in the world.</p>
                     </div>
                     <div>
-                        <button onclick="window.location.href='/registration'">
+                        <button onclick="window.location.href='/signup'">
                             Get started
                             <div class="star-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
@@ -269,20 +269,47 @@
         </section>
     </main>
 
-    <footer>
-        <h3>Homy</h3>
-        <ul class="social-links">
-            <a href="https://upayan.dev" target="_blank">
-                <img src="../media/footer/browser.png"></img>
-            </a>
-            <a href="https://www.instagram.com/upayan.mazumder" target="_blank">
-                <img src="../media/footer/instagram.png"></img>
-            </a>
-            <a href="https://www.linkedin.com/in/upayanmazumder" target="_blank">
-                <img src="../media/footer/linkedin.png"></img>
-            </a>
-        </ul>
-        <p>&copy; 2024 Upayan</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="https://upayan.dev">About Us</a>
+                    <a href="https://upayan.dev">Blog</a>
+                    <a href="https://upayan.dev">Contact</a>
+                    <a href="mailto:support.homy@upayan.dev">Support</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <a href="/#products">Features</a>
+                    <a href="/#products">Pricing</a>
+                    <a href="/#products">Integrations</a>
+                    <a href="/#products">API</a>
+                    <a href="/#products">Demo</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <a href="https://upayan.dev">Help Center</a>
+                    <a href="https://upayan.dev">Documentation</a>
+                    <a href="https://upayan.dev">Community</a>
+                    <a href="https://upayan.dev">Security</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-media">
+                    <a href="https://www.facebook.com/upayan.mazumder"><i class="icon">Facebook</i></a>
+                    <a href="https://github.com/upayanmazumder"><i class="icon">Github</i></a>
+                    <a href="https://www.instagram.com/upayan.mazumder/"><i class="icon">Instagram</i></a>
+                    <a href="https://www.linkedin.com/in/upayanmazumder/"><i class="icon">LinkedIn</i></a>
+                </div>
+                <div class="footer-buttons">
+                    <button id="footer-joinNow-button">Join now</button>
+                    <button id="footer-getInTouch-button">Get in touch</button>
+                    <button id="go-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+                </div>
+            </div>
+        </div>
+        </div>
     </footer>
 </body>
 
