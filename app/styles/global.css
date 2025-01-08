@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'RedHatDisplay';
+    src: url('./fonts/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --body-background-color: #101010;
+    --main-background: transparent;
+    --header-background-color: #2424242d;
+    --header-initial-background-color: #1c1c1c;
+    --footer-background: #0a0a0a;
+    --form-background-color: var(--glass-background-color);
+    --glass-background-color: rgba(255, 255, 255, 0.2);
+    --glass-background-hover-color: rgba(255, 255, 255, 0.3);
+    --scrollbar-background-color: var(--body-background-color);
+    --scrollbar-color: rgb(88, 88, 88);
+    --scrollbar-hover-color: rgb(136, 136, 136);
+
+    --text-color: #ffffff;
+    --link-text: #1E90FF;
+    --link-hover-text: #00BFFF;
+    --padding-small: 0.625rem;
+    --padding-medium: 0.9375rem;
+    --padding-large: 1.5625rem;
+
+    --margin-small: 0.3125rem;
+    --margin-medium: 0.625rem;
+    --margin-large: 0.9375rem;
+
+    --border-radius-small: 0.3125rem;
+    --border-radius-medium: 0.625rem;
+    --border-radius-large: 0.9375rem;
+
+    --screen-horizontal-margin: 200px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body-background-color);
+    color: var(--text-color);
+    font-family: 'RedHatDisplay', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background: var(--main-background);
+    margin: 0 var(--screen-horizontal-margin);
+    min-height: 60vh;
+}
+
+section {
+    margin: 50px 0;
+    scroll-margin-top: 150px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 1.5px 5px;
+}
+
+.container.container-purple {
+    background: var(--light-purple);
+}
+
+.container.container-dark {
+    background: var(--dark-background);
+    color: var(--dark-text);
+}
+
+.container.container-center {
+    text-align: center;
+}
+
+.container.container-spacing-xl {
+    padding: 4px 10px;
+}
+
+
+/* DESIGN --------------------------------------- */
+.ellipsis {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(57.58% 57.58% at 48.79% 42.42%,
+            rgba(24, 180, 244, 0.5) 0%,
+            rgba(46, 55, 114, 0) 63.22%);
+    transform: rotate(5deg);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.ellipsis.ellipsis-purple {
+    background: radial-gradient(50% 50% at 50% 50%,
+            rgba(172, 127, 244, 0.5) 0%,
+            rgba(21, 25, 52, 0) 100%);
+    transform: rotate(-5deg);
+}
+
+.ellipsis.ellipsis-blue {
+    background: radial-gradient(50% 50% at 50% 50%,
+            rgba(34, 88, 215, 0.5) 0%,
+            rgba(21, 25, 52, 0) 100%);
+    transform: rotate(-5deg);
+}
+
+.ellipsis.ellipsis-green {
+    background: radial-gradient(50% 50% at 50% 50%,
+            rgba(2, 255, 48, 0.5) 0%,
+            rgba(21, 25, 52, 0) 100%);
+    transform: rotate(-5deg);
+}
+
+.ellipsis.ellipsis-red {
+    background: radial-gradient(50% 50% at 50% 50%,
+            rgba(168, 0, 0, 0.5) 0%,
+            rgba(21, 25, 52, 0) 100%);
+    transform: rotate(-5deg);
+}
+
+.ellipsis.ellipsis-yellow {
+    background: radial-gradient(50% 50% at 50% 50%,
+            rgba(219, 246, 48, 0.41) 0%,
+            rgba(52, 35, 21, 0) 100%);
+    transform: rotate(-5deg);
+}
+
+@media screen and (min-width: 768px) {
+    .ellipsis {
+        width: 1400px;
+        height: 800px;
+    }
+
+    .ellipsis.ellipsis-red {
+        width: 1400px;
+        height: 800px;
+    }
+
+    .ellipsis.ellipsis-green {
+        width: 1400px;
+        height: 800px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color);
+    margin: var(--margin-medium) 0;
+}
+
+p {
+    margin: var(--margin-medium) 0;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    color: var(--link-text);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--link-hover-text);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--scrollbar-background-color);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-background-color, transparent);
+    border: 2px solid var(--scrollbar-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-hover-color);
+    transform: scale(1.1);
+}

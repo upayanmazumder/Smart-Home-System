@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/global.css">
     <link rel="stylesheet" href="../../styles/styles.css">
-    <link rel="stylesheet" href="../../styles/common.css">
-    <title>Login - Smart Home System</title>
+    <link rel="icon" href="../../public/favicon.ico" type="image/x-icon">
+    <title>Login - Homy</title>
 </head>
 
 <body>
     <header>
         <div class="branding">
             <a href="/">
-                <img src="./favicon.ico" alt="Upayan">
-                <h1>Smart Home System</h1>
+                <img src="../../media/icon.png" alt="Upayan" height="80px" width="80px">
+                <h1>Homy</h1>
             </a>
         </div>
         <nav>
@@ -39,7 +40,10 @@
     </header>
 
     <main>
-        <h1>Login</h1>
+        <div class="heading">
+            <h1>Log in</h1>
+            <p>Login to your Homy account</p>
+        </div>
         <form>
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>
@@ -53,12 +57,18 @@
     </main>
 
     <footer>
-        <h3>Smart Home System</h3>
-        <a href="https://upayan.dev" target="_blank"><img src="../media/footer/browser.png"></img></a>
-        <a href="https://www.instagram.com/upayan.mazumder" target="_blank"><img
-                src="../media/footer/instagram.png"></img></a>
-        <a href="https://www.linkedin.com/in/upayanmazumder" target="_blank"><img
-                src="../media/footer/linkedin.png"></img></a>
+        <h3>Homy</h3>
+        <ul class="social-links">
+            <a href="https://upayan.dev" target="_blank">
+                <img src="../../media/footer/browser.png"></img>
+            </a>
+            <a href="https://www.instagram.com/upayan.mazumder" target="_blank">
+                <img src="../../media/footer/instagram.png"></img>
+            </a>
+            <a href="https://www.linkedin.com/in/upayanmazumder" target="_blank">
+                <img src="../../media/footer/linkedin.png"></img>
+            </a>
+        </ul>
         <p>&copy; 2024 Upayan</p>
     </footer>
 </body>
