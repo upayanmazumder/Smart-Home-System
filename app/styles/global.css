@@ -123,12 +123,10 @@ section {
 
 @media (max-width: 1024px) {
     .ellipsis {
-        .ellipsis {
-            max-width: 100%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
 
     }
 }
