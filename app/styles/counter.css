@@ -4,6 +4,8 @@
     align-items: center;
     margin-top: 20px;
     margin-bottom: 10px;
+    max-width: 50vw;
+    margin: auto;
 }
 
 .counter-container:hover {
@@ -13,16 +15,19 @@
 .counter {
     display: flex;
     flex-direction: column;
-    background-color: rgba(133, 133, 133, 0.425);
+    background-color: rgba(216, 216, 216, 0.425);
     height: 80px;
     width: 80px;
     text-align: center;
     justify-content: center;
     border-radius: 50%;
-    box-shadow: 0 0 0 8px rgba(219, 219, 219, 0.425);
+    border: 8px rgb(45 45 45 / 97%) solid;
     transition: all 0.2s ease-in-out;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.8em;
 }
 
 .counter-container:hover .counter {
-    box-shadow: 0 0 0 9px rgba(237, 237, 237, 0.425);
+    border-color: rgb(45, 45, 45);
+    box-shadow: 0 0 6px 3px rgba(124, 18, 181, 0.202);
 }

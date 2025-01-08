@@ -2,10 +2,15 @@
     padding: var(--padding-large) calc(3*var(--padding-large));
     display: flex;
     flex-direction: row;
-    gap: var(--padding-large);
+    gap: 60px;
     height: 60vh;
     align-items: center;
     margin: 0 !important;
+}
+
+.hero .brand img {
+    height: 250px;
+    border-radius: var(--border-radius-large);
 }
 
 button {
@@ -20,6 +25,7 @@ button {
     box-shadow: 0 0 0 #1e90ff8c;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    font-family: system-ui;
 }
 
 .star-1 {
