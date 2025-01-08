@@ -58,7 +58,7 @@ header nav ul li a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     header nav ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
         background-color: #1e1e1e;
         padding: 10px;
@@ -75,8 +75,20 @@ header nav ul li a:hover {
 }
 
 @media (max-width: 480px) {
-    header .branding h1 {
-        font-size: 1.4rem;
+    header {
+        padding: 0 10px;
+        background-color: transparent;
+        box-shadow: none;
+        justify-content: center;
+    }
+
+    header .branding {
+        display: none;
+    }
+
+    header nav {
+        box-shadow: 0 1px 10px 3px #bbbbbb61;
+        border-radius: 5px;
     }
 
     header nav ul li a {
@@ -84,7 +96,6 @@ header nav ul li a:hover {
     }
 }
 
-/* Animation */
 @keyframes slideDown {
     from {
         transform: translateY(-100%);

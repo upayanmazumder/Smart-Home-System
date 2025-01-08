@@ -36,6 +36,7 @@
     .hero {
         padding: var(--padding-small) calc(1.5 * var(--padding-small));
         gap: 15px;
+        padding-top: 30px;
     }
 
     .hero .brand img {
@@ -51,6 +52,14 @@
 .hero .brand img {
     height: 250px;
     border-radius: var(--border-radius-large);
+}
+
+.hero .info ul {
+    list-style-type: disclosure-closed;
+}
+
+.hero .info ul li {
+    margin: 8px 0;
 }
 
 .hero button {
