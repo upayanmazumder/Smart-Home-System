@@ -35,8 +35,27 @@
     --screen-horizontal-margin: 200px;
 }
 
+@media (max-width: 1024px) {
+    :root {
+        --screen-horizontal-margin: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --screen-horizontal-margin: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --screen-horizontal-margin: 50px;
+    }
+}
+
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -45,7 +64,7 @@ body {
     font-family: 'RedHatDisplay', sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 main {
@@ -54,6 +73,7 @@ main {
     background: var(--main-background);
     margin: 0 var(--screen-horizontal-margin);
     min-height: 60vh;
+    overflow: hidden;
 }
 
 section {
