@@ -11,8 +11,6 @@ const server = http.createServer((req, res) => {
     let filePath = '.' + req.url;
     if (filePath === './') {
         filePath = './routes/index.html';
-    } else if (filePath.startsWith('./fonts')) {
-        filePath = './public' + req.url;
     } else if (filePath.startsWith('./public')) {
         filePath = './public' + req.url.slice(7);
     } else if (filePath.startsWith('./media')) {
