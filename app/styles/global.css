@@ -220,23 +220,21 @@ button {
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
-    background-color: var(--scrollbar-background-color);
+    width: 10px;
+    height: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--scrollbar-track-background-color, transparent);
-    border: 2px solid var(--scrollbar-color);
-    border-radius: 4px;
+    background: #000;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--scrollbar-color);
-    border-radius: 4px;
-    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    background: #333;
+    border-radius: 10px;
+    border: 2px solid #000;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--scrollbar-hover-color);
-    transform: scale(1.1);
+    background: #555;
 }
