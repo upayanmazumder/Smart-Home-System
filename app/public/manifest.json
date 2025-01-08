@@ -6,6 +6,7 @@
     "background_color": "#000000",
     "theme_color": "#000000",
     "description": "A smart home system application",
+    "orientation": "portrait",
     "icons": [
         {
             "src": "/icons/icon-16x16.png",
