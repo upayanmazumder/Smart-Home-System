@@ -43,13 +43,13 @@
 
 @media (max-width: 768px) {
     :root {
-        --screen-horizontal-margin: 100px;
+        --screen-horizontal-margin: 50px;
     }
 }
 
 @media (max-width: 480px) {
     :root {
-        --screen-horizontal-margin: 50px;
+        --screen-horizontal-margin: 20px;
     }
 }
 
@@ -114,6 +114,12 @@ section {
     transform: rotate(5deg);
     opacity: 0.5;
     z-index: -1;
+}
+
+@media (max-width: 1024px) {
+    .ellipsis {
+        display: none;
+    }
 }
 
 .ellipsis.ellipsis-purple {

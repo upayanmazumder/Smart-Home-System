@@ -128,6 +128,12 @@ header nav ul li:hover a {
     display: flex;
 }
 
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+
 .sidebar-menu {
     display: flex;
     flex-direction: column;
@@ -158,6 +164,22 @@ header nav ul li:hover a {
     background: var(--footer-background);
     padding: var(--padding-medium) var(--screen-horizontal-margin);
 }
+
+@media (max-width: 1000px) {
+    .footer button {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer button {
+        font-size: 0.5rem;
+        padding: 0.8em;
+    }
+}
+
+@media (max-width: 590px) {}
+
 
 .footer-container {
     max-width: 1200px;
