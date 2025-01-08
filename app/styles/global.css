@@ -230,7 +230,7 @@ button {
 ::-webkit-scrollbar-thumb {
     background: #333;
     border-radius: 10px;
-    border: 2px solid #000;
+    border: 2px solid var(--scrollbar-background-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
