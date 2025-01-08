@@ -6,7 +6,7 @@
 :root {
     --body-background-color: #060606;
     --main-background: transparent;
-    --header-background-color: #00000050;
+    --header-background-color: #1e1e1ebc;
     --header-initial-background-color: #1c1c1c;
     --footer-background: transparent;
     --sidebar-background-color: rgba(30, 30, 30, 0.9);
