@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/global.css">
     <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/form.css">
     <link rel="icon" href="../../public/favicon.ico" type="image/x-icon">
     <title>Login - Homy</title>
 </head>
@@ -52,16 +53,21 @@
             <h1>Log in</h1>
             <p>Login to your Homy account</p>
         </div>
-        <form>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-            <br>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-            <br>
-            <button type="submit">Login</button>
-            <a href="/registration">Don't have an account yet? Sign up!</a>
-        </form>
+        <div class="container container-center">
+            <div class="form-container">
+                <h2 class="form-heading">Log in</h2>
+                <form>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <br>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <br>
+                    <button type="submit">Login</button>
+                    <a href="/registration">Don't have an account yet? Sign up!</a>
+                </form>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
