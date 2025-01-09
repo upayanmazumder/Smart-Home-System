@@ -106,7 +106,7 @@ header nav ul li a:hover {
 }
 
 .sidebar .hamburger {
-    background-color: #e1e1e164;
+    background-color: #e1e1e1c6;
     border-radius: 5px;
     display: none;
     color: white;
@@ -160,12 +160,22 @@ header nav ul li a:hover {
         display: block;
     }
 
+    .sidebar .hamburger:hover {
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.349);
+    }
+
     .sidebar nav ul {
         display: none;
     }
 
     .sidebar:hover nav ul {
         display: block;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .sidebar:hover nav ul li i {
+        border-radius: 0;
+        background-color: rgb(94, 94, 94);
     }
 
     .sidebar nav ul li:hover a span {
