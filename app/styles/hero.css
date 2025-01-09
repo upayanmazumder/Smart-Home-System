@@ -2,23 +2,28 @@
     padding: var(--padding-large) calc(3 * var(--padding-large));
     display: flex;
     flex-direction: row;
-    gap: 60px;
     min-height: 60vh;
     align-items: center;
     margin: 0 !important;
 }
 
+.hero .brand img {
+    margin-left: 30px;
+}
+
 @media (max-width: 1000px) {
     .hero {
         flex-direction: column;
-        gap: 30px;
+    }
+
+    .hero .brand img {
+        margin-left: 0;
     }
 }
 
 @media (max-width: 768px) {
     .hero {
         padding: var(--padding-medium) calc(2 * var(--padding-medium));
-        gap: 20px;
     }
 
     .hero .brand img {
@@ -39,7 +44,6 @@
 @media (max-width: 480px) {
     .hero {
         padding: var(--padding-small) calc(1.5 * var(--padding-small));
-        gap: 15px;
         padding-top: 30px;
     }
 
