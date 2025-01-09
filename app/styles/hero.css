@@ -62,6 +62,10 @@
     margin: 8px 0;
 }
 
+.hero .info p {
+    line-height: 25px;
+}
+
 .hero button {
     position: relative;
     padding: 12px 35px;
