@@ -26,5 +26,8 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build app --tag ghcr.io/upayanmazumder/smart-home-system/app:latest --build-arg NODE_ENV=production
-          docker push ghcr.io/upayanmazumder/smart-home-system/app:latest
+          IMAGE_TAG=ghcr.io/upayanmazumder/smart-home-system/app
+          COMMIT_SHA=${{ github.sha }}
+          docker build app --tag $IMAGE_TAG:latest --tag $IMAGE_TAG:$COMMIT_SHA --build-arg NODE_ENV=production
+          docker push $IMAGE_TAG:latest
+          docker push $IMAGE_TAG:$COMMIT_SHA
