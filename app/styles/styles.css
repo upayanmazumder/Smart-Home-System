@@ -134,7 +134,7 @@ header nav ul li a:hover {
 }
 
 .sidebar nav ul li:hover a i {
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25);
     background-color: #1e1e1e78;
 }
 
