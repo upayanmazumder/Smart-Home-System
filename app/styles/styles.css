@@ -76,24 +76,9 @@ header nav ul li a:hover {
 
 @media (max-width: 480px) {
     header {
-        padding: 0 10px;
-        background-color: transparent;
-        box-shadow: none;
-        justify-content: center;
-    }
-
-    header .branding {
         display: none;
     }
 
-    header nav {
-        box-shadow: 0 1px 10px 3px #bbbbbb61;
-        border-radius: 5px;
-    }
-
-    header nav ul li a {
-        font-size: 0.9rem;
-    }
 }
 
 @keyframes slideDown {
@@ -118,6 +103,13 @@ header nav ul li a:hover {
     z-index: 1000;
     border-radius: 0 0 2dvh 0;
     padding: 10px;
+}
+
+.sidebar .hamburger {
+    background-color: #e1e1e164;
+    border-radius: 5px;
+    display: none;
+    color: white;
 }
 
 .sidebar a {
@@ -157,7 +149,27 @@ header nav ul li a:hover {
     padding: var(--padding-medium);
 }
 
-.sidebar nav ul li:hover
+@media (max-width: 590px) {
+    .sidebar {
+        background-color: transparent !important;
+    }
+
+    .sidebar .hamburger {
+        display: block;
+    }
+
+    .sidebar nav ul {
+        display: none;
+    }
+
+    .sidebar:hover nav ul {
+        display: block;
+    }
+
+    .sidebar nav ul li:hover a span {
+        background-color: rgba(128, 128, 128, 1);
+    }
+}
 
 /* Page Heading */
 .heading {
@@ -185,9 +197,6 @@ header nav ul li a:hover {
         padding: 0.8em;
     }
 }
-
-@media (max-width: 590px) {}
-
 
 .footer-container {
     max-width: 1200px;
