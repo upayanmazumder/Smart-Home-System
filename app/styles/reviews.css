@@ -1,15 +1,15 @@
 @media (max-width: 768px) {
-    #opinions {
+    #reviews {
         margin-top: 0;
     }
 }
 
-#opinions h2,
-#opinions p {
+#reviews h2,
+#reviews p {
     text-align: center;
 }
 
-.opinion-container {
+.review-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -19,34 +19,34 @@
     align-content: center;
 }
 
-.opinion-card {
+.review-card {
     width: 300px;
     padding: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.opinion-card.target {
+.review-card.target {
     padding-left: 100px;
 }
 
 @media (max-width: 480px) {
-    .opinion-card.target {
+    .review-card.target {
         padding-left: 50px;
     }
 }
 
-.opinion-card p {
+.review-card p {
     text-align: left !important;
 }
 
-.opinion-card-header {
+.review-card-header {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
 }
 
-.opinion-card img {
+.review-card img {
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -54,13 +54,13 @@
     border: 2px solid #3a3a3a;
 }
 
-.opinion-card h3 {
+.review-card h3 {
     color: #3196f5;
     font-size: 1.1em;
     margin: 0;
 }
 
-.opinion-card p {
+.review-card p {
     font-size: 0.9em;
     color: #c7c7c7;
     line-height: 1.4;
