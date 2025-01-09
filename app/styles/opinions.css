@@ -1,3 +1,9 @@
+@media (max-width: 768px) {
+    #opinions {
+        margin-top: 0;
+    }
+}
+
 #opinions h2,
 #opinions p {
     text-align: center;

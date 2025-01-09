@@ -25,10 +25,14 @@
         height: 200px !important;
     }
 
-    .hero button {
-        padding: 10px 30px;
-        font-size: 15px;
-        margin-bottom: 30px;
+    .hero .info {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .hero .info button {
+        align-self: center;
     }
 }
 
