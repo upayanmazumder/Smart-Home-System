@@ -147,7 +147,7 @@ header nav ul li a:hover {
 
 .sidebar nav ul li:hover a span {
     color: white;
-    background-color: rgba(128, 128, 128, 0.202);
+    background-color: rgb(239 239 239 / 29%);
     padding: var(--padding-medium);
 }
 
