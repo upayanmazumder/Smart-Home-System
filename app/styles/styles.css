@@ -130,6 +130,7 @@ header nav ul li a:hover {
     width: 18px;
     margin-right: 15px;
     border-radius: 50%;
+    transition: all 0.2s ease-in-out;
 }
 
 .sidebar nav ul li:hover a i {
@@ -141,6 +142,7 @@ header nav ul li a:hover {
     color: transparent;
     background-color: transparent;
     border-radius: var(--border-radius-medium);
+    transition: all 0.2s ease-in-out;
 }
 
 .sidebar nav ul li:hover a span {
