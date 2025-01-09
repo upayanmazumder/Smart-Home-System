@@ -15,7 +15,7 @@
 .counter {
     display: flex;
     flex-direction: column;
-    background-color: rgba(216, 216, 216, 0.425);
+    background-color: rgb(39 39 39 / 82%);
     height: 80px;
     width: 80px;
     text-align: center;
@@ -27,9 +27,19 @@
     font-size: 0.8em;
 }
 
+.counter span {
+    font-family: fantasy;
+}
+
+.counter .label {
+    text-transform: uppercase;
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+
 .counter-container:hover .counter {
     border-color: rgb(45, 45, 45);
-    box-shadow: rgb(231 128 18 / 36%) 0px 0px 12px 4px;
+    box-shadow: rgb(73 142 241 / 23%) 0px 0px 18px 5px;
 }
 
 @media (max-width: 768px) {
