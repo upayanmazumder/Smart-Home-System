@@ -28,6 +28,12 @@
     align-self: flex-start;
 }
 
+@media (prefers-color-scheme: light) {
+    .form-container label {
+        color: rgb(64, 64, 64);
+    }
+}
+
 .form-container input[type="text"],
 .form-container input[type="email"],
 .form-container input[type="password"] {
