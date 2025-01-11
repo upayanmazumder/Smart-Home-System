@@ -23,6 +23,13 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+@media (prefers-color-scheme: light) {
+    .product {
+        box-shadow: none;
+        background: none;
+    }
+}
+
 @media (max-width: 1024px) {
     .product {
         background: transparent;
@@ -42,6 +49,12 @@
 
 .product:hover {
     background: linear-gradient(90deg, var(--glass-background-hover-color), transparent);
+}
+
+@media (prefers-color-scheme: light) {
+    .product:hover {
+        background: transparent;
+    }
 }
 
 @media (max-width: 1024px) {

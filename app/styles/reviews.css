@@ -9,6 +9,12 @@
     text-align: center;
 }
 
+@media (prefers-color-scheme: light) {
+    #reviews p {
+        color: rgb(59, 59, 59);
+    }
+}
+
 .review-container {
     display: flex;
     flex-wrap: wrap;

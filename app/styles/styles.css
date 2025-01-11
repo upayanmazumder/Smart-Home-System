@@ -151,6 +151,12 @@ header nav ul li a:hover {
     padding: var(--padding-medium);
 }
 
+@media (prefers-color-scheme: light) {
+    .sidebar nav ul li:hover a span {
+        background-color: #1e1e1ea6;
+    }
+}
+
 @media (max-width: 590px) {
     .sidebar {
         background-color: transparent !important;
