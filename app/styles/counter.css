@@ -27,6 +27,14 @@
     font-size: 0.8em;
 }
 
+
+@media (prefers-color-scheme: light) {
+    .counter {
+        background-color: rgb(169, 169, 169);
+        border-color: rgb(184, 184, 184);
+    }
+}
+
 .counter span {
     font-family: fantasy;
 }
@@ -40,6 +48,13 @@
 .counter-container:hover .counter {
     border-color: rgb(45, 45, 45);
     box-shadow: rgb(73 142 241 / 23%) 0px 0px 18px 5px;
+}
+
+
+@media (prefers-color-scheme: light) {
+    .counter-container:hover .counter {
+        border-color: rgb(202, 202, 202);
+    }
 }
 
 @media (max-width: 768px) {
