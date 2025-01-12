@@ -124,6 +124,10 @@ header nav ul li a:hover {
     padding: 0;
 }
 
+.sidebar nav .fas {
+    text-align: center;
+}
+
 .sidebar nav ul li a i {
     padding: var(--padding-medium);
     height: 18px;
