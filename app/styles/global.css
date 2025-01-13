@@ -30,7 +30,7 @@
     --border-radius-medium: 0.625rem;
     --border-radius-large: 0.9375rem;
 
-    --screen-horizontal-margin: 200px;
+    --screen-horizontal-margin: 100px;
 }
 
 @media (prefers-color-scheme: light) {
