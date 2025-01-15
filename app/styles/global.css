@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'RedHatDisplay';
-    src: url('./fonts/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
+    src: url('/public/fonts/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
 }
 
 :root {
