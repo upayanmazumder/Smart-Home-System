@@ -5,7 +5,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: var(--header-background-color);
-    padding: 10px var(--screen-horizontal-margin);
+    padding: 10px 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
     transition: all 0.3s ease-in-out;
@@ -99,7 +99,7 @@ header nav ul li a:hover {
     position: fixed;
     background-color: rgba(83, 83, 83, 0.613) !important;
     width: 50px;
-    height: fill;
+    height: 100%;
     z-index: 1000;
     border-radius: 0 0 2dvh 0;
     padding: 10px;
@@ -114,6 +114,11 @@ header nav ul li a:hover {
 
 .sidebar a {
     color: white;
+}
+
+.sidebar nav {
+    margin-top: 100px;
+    margin-bottom: 0;
 }
 
 .sidebar nav ul {
@@ -145,13 +150,13 @@ header nav ul li a:hover {
 .sidebar nav ul li a span {
     color: transparent;
     background-color: transparent;
-    border-radius: var(--border-radius-medium);
+    border-radius: 10dvh;
     transition: all 0.2s ease-in-out;
 }
 
 .sidebar nav ul li:hover a span {
     color: white;
-    background-color: rgb(239 239 239 / 29%);
+    background-color: rgba(76, 76, 76, 0.774);
     padding: var(--padding-medium);
 }
 
@@ -204,7 +209,7 @@ header nav ul li a:hover {
 
 .footer {
     background: var(--footer-background);
-    padding: var(--padding-medium) var(--screen-horizontal-margin);
+    padding: var(--padding-medium) calc(var(--screen-horizontal-margin)/2);
 }
 
 @media (max-width: 1000px) {
