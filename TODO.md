@@ -1,9 +1,9 @@
-[x]	Theme support
-[]	Carousels
-[x]	FAQ Section
-[]	Contact form
-[]	Partners section
-[]	Blog section
-[]	E-commerce integration
-[]	Newsletter subscription
-[]	Accessibility features
+- [x]	Theme support
+- []	Carousels
+- [x]	FAQ Section
+- []	Contact form
+- []	Partners section
+- []	Blog section
+- []	E-commerce integration
+- []	Newsletter subscription
+- []	Accessibility features
