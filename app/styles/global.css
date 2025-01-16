@@ -143,6 +143,14 @@ section:nth-child(4) {
     --index: 3;
 }
 
+.sectionHeading {
+    text-align: center;
+}
+
+.sectionHeading p {
+    color: white !important;
+}
+
 .sectionHeading h2 {
     color: #e3e2e9c6;
     transition: all 0.2s ease-in-out;

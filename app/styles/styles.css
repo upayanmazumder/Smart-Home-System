@@ -150,7 +150,7 @@ header nav ul li a:hover {
 .sidebar nav ul li a span {
     color: transparent;
     background-color: transparent;
-    border-radius: 10dvh;
+    border-radius: var(--border-radius-small);
     transition: all 0.2s ease-in-out;
 }
 

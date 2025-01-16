@@ -1,4 +1,4 @@
-.faq-sep {
+.faq-box {
     font-family: 'Roboto', sans-serif;
     list-style: none;
     max-width: 600px;
@@ -9,13 +9,6 @@
     flex-direction: row;
     align-items: center;
     gap: 30px;
-}
-
-.faq-sep i {
-    font-size: 2rem;
-    display: block;
-    text-align: center;
-    margin-bottom: 1rem;
 }
 
 .faq-container details {
