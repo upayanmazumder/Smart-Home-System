@@ -1,0 +1,31 @@
+#partners {
+    padding: 2rem;
+    text-align: center;
+}
+
+.tier {
+    margin: 2rem 0;
+}
+
+.tier i {
+    margin: 0.5rem 2rem;
+    color: #ffffffea;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tier i:hover {
+    transform: translateY(-5px);
+    color: #ffffff;
+}
+
+.tier-1 i {
+    font-size: 25vh;
+}
+
+.tier-2 i {
+    font-size: 15vh;
+}
+
+.tier-3 i {
+    font-size: 10vh;
+}
