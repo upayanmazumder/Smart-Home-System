@@ -55,6 +55,34 @@ header nav ul li a:hover {
     color: #ffffff;
 }
 
+header .auth {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(128, 128, 128, 0.401);
+    padding: var(--padding-small);
+    border-radius: 10dvh;
+    margin-right: 30px;
+}
+
+header .auth img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+header .auth .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+header .details h3 {
+    margin: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header nav ul {

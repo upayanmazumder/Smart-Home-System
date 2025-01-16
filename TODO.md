@@ -1,8 +1,9 @@
 - [x]	Theme support
 - [x]	FAQ Section
-- []	Contact form
-- [x]	Partners section
-- []	Blog section
-- [x]	E-commerce integration
-- []	Newsletter subscription
-- [x]	Accessibility features
+- [x]    Contact form
+- [x]   Partners section
+- []    Blog section
+- [x]   E-commerce integration
+- []    Newsletter subscription
+- [x]   Accessibility features
+- [x]   Authentication
