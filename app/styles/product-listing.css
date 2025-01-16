@@ -1,3 +1,9 @@
+#products {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 #products h2,
 #products p {
     text-align: center;
@@ -7,6 +13,21 @@
     #products {
         padding: 15px;
     }
+}
+
+#products .shop {
+    background-color: rgb(21, 21, 21);
+    color: white;
+    border-radius: var(--border-radius-small);
+    border: none;
+    transition: box-shadow 0.3s ease-in-out;
+    align-self: center;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#products .shop:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .product-container {

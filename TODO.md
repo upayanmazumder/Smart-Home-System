@@ -3,6 +3,6 @@
 - []	Contact form
 - [x]	Partners section
 - []	Blog section
-- []	E-commerce integration
+- [x]	E-commerce integration
 - []	Newsletter subscription
 - [x]	Accessibility features
