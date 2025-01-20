@@ -1,6 +1,6 @@
 - [x]	Theme support
 - [x]	FAQ Section
-- [x]    Contact form
+- [x]   Contact form
 - [x]   Partners section
 - []    Blog section
 - [x]   E-commerce integration

@@ -20,5 +20,8 @@
   "homepage": "https://github.com/upayanmazumder/Smart-Home-System#readme",
   "dependencies": {
     "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.18.0"
   }
 }
