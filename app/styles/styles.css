@@ -235,19 +235,19 @@ header .details h3 {
 
 /* Footer */
 
-.footer {
+footer {
     background: var(--footer-background);
     padding: var(--padding-medium) calc(var(--screen-horizontal-margin)/2);
 }
 
 @media (max-width: 1000px) {
-    .footer button {
+    footer button {
         font-size: 0.7rem;
     }
 }
 
 @media (max-width: 768px) {
-    .footer button {
+    footer button {
         font-size: 0.5rem;
         padding: 0.8em;
     }
