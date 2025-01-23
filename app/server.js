@@ -13,6 +13,8 @@ const server = http.createServer((req, res) => {
         filePath = './routes/index.html';
     } else if (filePath.startsWith('./manifest.json')) {
         filePath = './public/manifest.json';
+    } else if (filePath.startsWith('./service-worker.js')) {
+        filePath = './public/service-worker.js';
     } else if (filePath.startsWith('./public')) {
         filePath = './public' + req.url.slice(7);
     } else if (filePath.startsWith('./media')) {
