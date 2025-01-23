@@ -21,14 +21,14 @@
     <meta name="theme-color" content="#000000">
     <meta name="msapplication-TileColor" content="#000000">
 
-    <meta property="og:title" content="Aether Link - Login">
+    <meta property="og:title" content="Aether Link - Signup">
     <meta property="og:description"
         content="Discover the future of smart home systems with modern design and functionality.">
     <meta property="og:image" content="https://smart-home-system.upayan.dev/public/icons/icon-512x512.png">
     <meta property="og:url" content="https://smart-home-system.upayan.dev">
     <meta property="og:type" content="website">
 
-    <title>Login</title>
+    <title>Signup</title>
 </head>
 
 <body>
@@ -37,31 +37,24 @@
 
     <main>
         <div class="heading">
-            <h1>Log in</h1>
-            <p>Login to your Aether Link account</p>
+            <h1>Sign Up</h1>
+            <p>Create an Aether Link account to get started</p>
         </div>
         <div class="ellipsis ellipsis-blue" style="top: -40px;left: -70px;"></div>
         <div class="form-container">
-            <h2 class="form-heading">Log in</h2>
+            <h2 class="form-heading">Sign Up</h2>
             <form>
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
                 <br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <br>
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
                 <br>
-                <button type="submit">Login</button>
-                <p>
-                    New here?
-                    <a href="/signup">
-                        Sign up
-                    </a>
-                    <br>
-                    Forgot your password?
-                    <a href="/forgot-password">
-                        Reset your password
-                    </a>
-                </p>
+                <button type="submit">Signup</button>
+                <p>Already have an account? <a href="/auth/login">Sign in</a></p>
             </form>
         </div>
     </main>
