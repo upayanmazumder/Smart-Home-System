@@ -162,6 +162,7 @@ header .details h3 {
     width: max-content;
     list-style: none;
     padding: 0;
+    gap: 1rem;
 }
 
 .sidebar nav .fas {
