@@ -6,6 +6,8 @@
     width: 100vw;
     overflow: hidden;
     position: relative;
+    background-color: #020202ab;
+    color: #e0e0e0;
 }
 
 #products h2,
@@ -33,6 +35,8 @@
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
+    background-color: #1e1e1e;
+    transition: background-color 0.5s ease;
 }
 
 .product::before {
@@ -42,7 +46,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.1) 100%);
+    background: linear-gradient(45deg, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0.05) 100%);
     z-index: -1;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -68,14 +72,14 @@
     height: 300px;
     object-fit: cover;
     border-radius: 50%;
-    border: 8px solid rgba(55, 55, 55, 0.8);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 8px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .product:hover ul img {
     transform: scale(1.05) rotate(3deg);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .product-content {
@@ -89,6 +93,7 @@
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    color: #ffffff;
 }
 
 .product-description {
@@ -98,12 +103,13 @@
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease 0.2s, transform 0.5s ease 0.2s;
+    color: #b0b0b0;
 }
 
 .shop-link {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #333;
+    background-color: #3498db;
     color: #fff;
     text-decoration: none;
     border-radius: 30px;
@@ -115,9 +121,9 @@
 }
 
 .shop-link:hover {
-    background-color: #555;
+    background-color: #2980b9;
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
 }
 
 .product.active .product-name,
@@ -142,16 +148,16 @@
 }
 
 .product-container::-webkit-scrollbar-track {
-    background: rgba(241, 241, 241, 0.1);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .product-container::-webkit-scrollbar-thumb {
-    background: rgba(136, 136, 136, 0.5);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
 }
 
 .product-container::-webkit-scrollbar-thumb:hover {
-    background: rgba(85, 85, 85, 0.7);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /* Navigation dots */
@@ -175,6 +181,51 @@
 }
 
 .scroll-dot.active {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #3498db;
     transform: scale(1.3);
+}
+
+/* Additional animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.product ul img:hover {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.product.active .product-content {
+    animation: slideIn 0.8s ease forwards;
+}
+
+.shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.shop:hover {
+background-color: #333;
+transform: translateY(-3px);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
