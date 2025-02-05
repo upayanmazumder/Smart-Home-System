@@ -2,8 +2,8 @@
 - [x]	FAQ Section
 - [x]   Contact form
 - [x]   Partners section
-- []    Blog section
+- [ ]    Blog section
 - [x]   E-commerce integration
-- []    Newsletter subscription
+- [ ]    Newsletter subscription
 - [x]   Accessibility features
 - [x]   Authentication
