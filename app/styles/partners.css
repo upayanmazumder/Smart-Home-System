@@ -29,3 +29,17 @@
 .tier-3 i {
     font-size: 10vh;
 }
+
+@media (max-width: 768px) {
+    .tier-1 i {
+        font-size: 10vh;
+    }
+
+    .tier-2 i {
+        font-size: 7vh;
+    }
+
+    .tier-3 i {
+        font-size: 5vh;
+    }
+}
