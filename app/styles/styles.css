@@ -141,7 +141,7 @@ header .details h3 {
 }
 
 .sidebar .hamburger {
-    background-color: #e1e1e1c6;
+    background-color: #a5a5a54c;
     border-radius: 5px;
     display: none;
     color: white;
@@ -181,6 +181,12 @@ header .details h3 {
 .sidebar nav ul li:hover a i {
     box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25);
     background-color: #1e1e1e78;
+}
+
+@media (max-width: 768px) {
+    .sidebar nav ul li:hover a i {
+        box-shadow: none;
+    }
 }
 
 .sidebar nav ul li a span {
