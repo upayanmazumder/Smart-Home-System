@@ -5,14 +5,17 @@ FROM node:latest
 WORKDIR /app
 
 # Copy package manifests and install dependencies
-COPY package*.json ./
+COPY package.json ./
 RUN npm install
 
 # Copy the local code to the container image
 COPY . .
 
+# Build
+RUN npm run build
+
 # Expose port 3000 to external traffic
 EXPOSE 3000
 
 # Start the Node.js server
-CMD ["node", "server.js"]
+CMD ["node", "server"]
