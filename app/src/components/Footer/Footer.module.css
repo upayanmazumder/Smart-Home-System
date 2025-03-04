@@ -1,0 +1,111 @@
+.footer {
+    background: var(--footer-background);
+    padding: var(--padding-medium) calc(var(--screen-horizontal-margin)/2);
+}
+
+@media (max-width: 1000px) {
+    .footer button {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer button {
+        font-size: 0.5rem;
+        padding: 0.8em;
+    }
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerColumns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.footerColumn {
+    padding: 0 var(--padding-large);
+}
+
+.footerColumn h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.footerColumn a {
+    display: block;
+    color: #bbbbbb;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.footerColumn a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #333333;
+    padding-top: 15px;
+}
+
+.socialMedia a {
+    margin-right: 15px;
+    color: #bbbbbbd0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.socialMedia a:hover {
+    color: #ffffff;
+}
+
+.footerButtons button {
+    border: none;
+    margin-left: 10px;
+    border-radius: 10dvh;
+    transition: background-color 0.3s;
+}
+
+.joinNowButton {
+    background-color: #333333;
+    color: azure;
+}
+
+.joinNowButton:hover {
+    background-color: #404040;
+}
+
+.getInTouchButton {
+    background-color: #ffffff;
+    color: #333333;
+    transition: all 0.2s ease-in-out;
+}
+
+.getInTouchButton:hover {
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.14);
+}
+
+.goToTop {
+    background-color: #1e1e1e77;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.goToTop:hover {
+    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.171);
+}
+
+.goToTop:active {
+    transform: scale(0.95);
+}
