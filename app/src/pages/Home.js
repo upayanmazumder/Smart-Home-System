@@ -1,10 +1,9 @@
+import Hero from "../components/Hero/Hero";
+
 function App() {
   return (
     <main>
-      <h1>Test</h1>
-      <h2>
-        Hi there
-      </h2>
+      <Hero />
     </main>
   );
 }

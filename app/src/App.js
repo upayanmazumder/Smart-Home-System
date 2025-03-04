@@ -1,13 +1,17 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import NotFound from "./components/404/404";
+
 
 function App() {
   return (
-    <main>
-      <h1>Hello</h1>
-      <h2>
-        Hi there
-      </h2>
-    </main>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 
