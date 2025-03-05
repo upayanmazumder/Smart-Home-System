@@ -44,7 +44,7 @@ const Footer = () => {
                     <div className={FooterStyles.footerButtons}>
                         <button className={FooterStyles.joinNowButton}>Join now</button>
                         <button className={FooterStyles.getInTouchButton}>Get in touch</button>
-                        <button className={FooterStyles.goToTop} onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+                        <button className={FooterStyles.goToTop} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>↑</button>
                     </div>
                 </div>
             </div>
