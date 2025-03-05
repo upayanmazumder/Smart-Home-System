@@ -6,7 +6,7 @@ import SmartThermostat from "../../media/devices/smart-thermostat.webp";
 const Products = () => {
     return (
         <>
-            <div style={{ paddingTop: '5px' }}>
+            <div id="products" style={{ paddingTop: '5px' }}>
                 <a className="sectionHeading" href="/#products">
                     <h2>Products</h2>
                     <p style={{ marginBottom: '30px' }}>Some of our best-selling products!</p>
@@ -22,7 +22,7 @@ const Products = () => {
                                     reminders,
                                     and much more using voice commands
                                 </p>
-                                <a href="#" className="shop-link">Shop Now</a>
+                                <a href="/shop/smart-speakers" className="shop-link">Shop Now</a>
                             </div>
                         </ul>
                     </div>
@@ -39,7 +39,7 @@ const Products = () => {
                                     the
                                     perfect ambiance
                                 </p>
-                                <a href="#" className="shop-link">Shop Now</a>
+                                <a href="/shop/smart-lighting" className="shop-link">Shop Now</a>
                             </div>
                         </ul>
                     </div>
@@ -58,7 +58,7 @@ const Products = () => {
                                     and it
                                     even shows you the weather forecast
                                 </p>
-                                <a href="#" className="shop-link">Shop Now</a>
+                                <a href="/shop/smart-thermostats" className="shop-link">Shop Now</a>
                             </div>
                         </ul>
                     </div>

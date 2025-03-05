@@ -25,7 +25,7 @@ function App() {
         </section>
       </main>
 
-      <Products />
+      <Products/>
 
       <main>
         <section id='reviews'>
