@@ -15,7 +15,7 @@ const Signup = () => {
                 <input type="password" id="password" name="password" required />
                 <br />
                 <button type="submit">Signup</button>
-                <p>Already have an account? <a href="/auth/login">Sign in</a></p>
+                <p>Already have an account?<a href="/auth/login"> Sign in</a></p>
             </form>
         </div>
     )

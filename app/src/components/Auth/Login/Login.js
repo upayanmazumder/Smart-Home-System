@@ -14,14 +14,10 @@ const Login = () => {
                 <button type="submit">Login</button>
                 <p>
                     New here?
-                    <a href="/auth/signup">
-                        Sign up
-                    </a>
+                    <a href="/auth/signup"> Sign up</a>
                     <br />
                     Forgot your password?
-                    <a href="/auth/forgot-password">
-                        Reset your password
-                    </a>
+                    <a href="/auth/forgot-password"> Reset your password</a>
                 </p>
             </form>
         </div>
