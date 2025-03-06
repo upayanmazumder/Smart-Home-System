@@ -24,6 +24,8 @@
 
 .sidebar a {
     color: white;
+    display: flex;
+    flex-direction: row;
 }
 
 .sidebar nav {
