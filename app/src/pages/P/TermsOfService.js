@@ -1,6 +1,11 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 const TermsOfService = () => {
     return (
         <main>
+            <a class="sectionHeading" href="#">
+                <h2>Terms of Service</h2>
+                <p>Please adhere to our Terms of Service</p>
+            </a>
             <section>
                 <h2>Conditions of Use</h2>
                 <p>We will provide their services to you, which are subject to the conditions stated below in this document.

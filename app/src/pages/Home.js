@@ -21,6 +21,9 @@ function App() {
         </section>
 
         <section id='partners'>
+          <a class="sectionHeading" href="/#partners">
+            <h2>Partners</h2>
+          </a>
           <Partners />
         </section>
       </main>
@@ -29,10 +32,18 @@ function App() {
 
       <main>
         <section id='reviews'>
+          <a class="sectionHeading" href="/#reviews">
+            <h2>Reviews</h2>
+            <p>What our users say</p>
+          </a>
           <Reviews />
         </section>
 
         <section id='faq'>
+          <a class="sectionHeading" href="/#faq">
+            <h2>FAQ</h2>
+            <p>Frequently Asked Questions</p>
+          </a>
           <FAQ />
         </section>
 

@@ -1,6 +1,11 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 const PrivacyPolicy = () => {
     return (
         <main>
+            <a class="sectionHeading" href="#">
+                <h2>Privacy Policy</h2>
+                <p>Please adhere to our Privacy Policy</p>
+            </a>
             <section>
             <h2>Information Collection</h2>
             <p>We collect information from you when you register on our site, subscribe to our newsletter, fill out a

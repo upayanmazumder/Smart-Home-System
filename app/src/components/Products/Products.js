@@ -17,6 +17,10 @@ const productImages = {
 const Products = () => {
     return (
         <div className={productStyles.container}>  
+            <a class="sectionHeading" href="/#reviews">
+                <h2>Products</h2>
+                <p>Some of our best-selling products</p>
+            </a>
             <div className={productStyles.productContainer}>
                 {productsData.map((product, index) => (
                     <ul key={index} className={productStyles.product}>
