@@ -1,5 +1,8 @@
 import sidebarStyles from "./Sidebar.module.css";
 
+import {BsDropbox, BsGithub, BsHouse, BsHouseFill, BsStar, BsStarFill } from "react-icons/bs";
+import { BiSolidLogIn } from "react-icons/bi";
+
 const Sidebar = () => {
     return (
         <aside className={sidebarStyles.sidebar}>
@@ -10,7 +13,7 @@ const Sidebar = () => {
                 <ul>
                     <li>
                         <a href="/">
-                            <i class="fas fa-home"></i>
+                            <BsHouseFill     />
                             <span>
                                 Home
                             </span>
@@ -18,7 +21,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <a href="/#products">
-                            <i class="fas fa-box-open"></i>
+                            <BsDropbox />
                             <span>
                                 Products
                             </span>
@@ -26,7 +29,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <a href="/#reviews">
-                            <i class="fas fa-star"></i>
+                            <BsStarFill />
                             <span>
                                 Reviews
                             </span>
@@ -34,7 +37,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <a href="https://github.com/upayanmazumder/Smart-Home-System" target="_blank" rel="noreferrer">
-                            <i class="fas fa-code-branch"></i>
+                            <BsGithub />
                             <span>
                                 Repository
                             </span>
@@ -42,7 +45,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <a href="/auth/login">
-                            <i class="fas fa-sign-in-alt"></i>
+                            <BiSolidLogIn />
                             <span>
                                 Login
                             </span>

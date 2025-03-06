@@ -110,9 +110,8 @@
 .shopLink:hover {
     background: #2980b9;
 }
-
 .shop {
-    background: rgba(23, 144, 152, 0.483);
+    background: #1e3a8a;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -124,5 +123,5 @@
 }
 
 .shop:hover {
-    background: #e91e63;
+    background: #1e40af;
 }

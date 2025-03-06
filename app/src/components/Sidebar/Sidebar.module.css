@@ -43,7 +43,7 @@
     text-align: center;
 }
 
-.sidebar nav ul li a i {
+.sidebar nav ul li a svg {
     padding: var(--padding-medium);
     height: 18px;
     width: 18px;
@@ -53,13 +53,13 @@
     text-align: center;
 }
 
-.sidebar nav ul li:hover a i {
+.sidebar nav ul li:hover a svg {
     box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25);
     background-color: #1e1e1e78;
 }
 
 @media (max-width: 768px) {
-    .sidebar nav ul li:hover a i {
+    .sidebar nav ul li:hover a svg {
         box-shadow: none;
     }
 }
@@ -105,7 +105,7 @@
         transition: all 0.3s ease-in-out;
     }
 
-    .sidebar:hover nav ul li i {
+    .sidebar:hover nav ul li svg {
         border-radius: 0;
         background-color: rgb(94, 94, 94);
     }

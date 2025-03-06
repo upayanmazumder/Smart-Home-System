@@ -4,6 +4,8 @@ import SmartSpeaker from "../../media/devices/smart-speaker.webp";
 import SmartLighting from "../../media/devices/smart-lighting.webp";
 import SmartThermostat from "../../media/devices/smart-thermostat.webp";
 
+import { BsCart } from "react-icons/bs";
+
 import productsData from "../../data/products.json";
 
 const productImages = {
@@ -31,7 +33,7 @@ const Products = () => {
             </div>
             <br />
             <button onClick={() => window.location.href='https://buymeacoffee.com/upayan'} className={productStyles.shop}>
-                Check out other products
+                <BsCart /> Check out the rest of the store!
             </button>
             <br />
         </div>
