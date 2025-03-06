@@ -1,4 +1,4 @@
-.form-container {
+.formContainer {
     background-color: var(--form-background-color);
     border-radius: 8px;
     padding: 20px;
@@ -8,19 +8,19 @@
     margin: 0 auto;
 }
 
-.form-heading {
+.formHeading {
     text-align: center;
     margin-bottom: 20px;
     font-size: 1.8em;
     color: #e0e0e0;
 }
 
-.form-container form {
+.formContainer form {
     display: flex;
     flex-direction: column;
 }
 
-.form-container label {
+.formContainer label {
     margin-bottom: 10px;
     margin-left: 5px;
     font-size: 1em;
@@ -29,14 +29,14 @@
 }
 
 @media (prefers-color-scheme: light) {
-    .form-container label {
+    .formContainer label {
         color: rgb(64, 64, 64);
     }
 }
 
-.form-container input[type="text"],
-.form-container input[type="email"],
-.form-container input[type="password"] {
+.formContainer input[type="text"],
+.formContainer input[type="email"],
+.formContainer input[type="password"] {
     background-color: #d7d7d718;
     color: #ffffff;
     border: 1px solid #444444;
@@ -50,13 +50,13 @@
     box-sizing: border-box;
 }
 
-.form-container input[type="text"]:focus,
-.form-container input[type="email"]:focus,
-.form-container input[type="password"]:focus {
+.formContainer input[type="text"]:focus,
+.formContainer input[type="email"]:focus,
+.formContainer input[type="password"]:focus {
     border-color: #3b82f6;
 }
 
-.form-container button {
+.formContainer button {
     background-color: #3b82f6;
     color: #ffffff;
     border: none;
@@ -70,15 +70,15 @@
     box-sizing: border-box;
 }
 
-.form-container button:hover {
+.formContainer button:hover {
     background-color: #2563eb;
 }
 
-.form-container p {
+.formContainer p {
     text-align: start;
 }
 
-.form-container p a {
+.formContainer p a {
     margin-top: 10px;
     text-align: center;
     color: #3b82f6;
@@ -86,12 +86,12 @@
     transition: color 0.3s ease;
 }
 
-.form-container p a:hover {
+.formContainer p a:hover {
     color: #2563eb;
 }
 
 @media (max-width: 600px) {
-    .form-container {
+    .formContainer {
         padding: 15px;
     }
 
@@ -99,14 +99,14 @@
         font-size: 1.5em;
     }
 
-    .form-container input[type="text"],
-    .form-container input[type="email"],
-    .form-container input[type="password"] {
+    .formContainer input[type="text"],
+    .formContainer input[type="email"],
+    .formContainer input[type="password"] {
         font-size: 0.9em;
         padding: 8px;
     }
 
-    .form-container button {
+    .formContainer button {
         font-size: 0.9em;
         padding: 8px;
     }

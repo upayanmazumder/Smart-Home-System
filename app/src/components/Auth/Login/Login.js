@@ -1,7 +1,9 @@
+import authStyles from "../Auth.module.css";
+
 const Login = () => {
     return (
-        <div>
-        <h2>Log in</h2>
+        <div className={authStyles.formContainer}>
+        <h2 className={authStyles.formHeading}>Log in</h2>
             <form>
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required />

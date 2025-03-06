@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Smart Speakers",
+        "description": "Control other smart home devices, play music, set reminders, and much more using voice commands"
+    },
+    {
+        "name": "Smart Lighting Systems",
+        "description": "Transform your home with smart lighting. You can control the lights using your smartphone, set schedules, and even change colors to create the perfect ambiance"
+    },
+    {
+        "name": "Smart Thermostats",
+        "description": "This smart thermostat learns your temperature preferences and adjusts automatically to save energy. You can control it remotely via your phone, and it even shows you the weather forecast"
+    }
+]

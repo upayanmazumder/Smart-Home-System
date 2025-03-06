@@ -33,7 +33,7 @@ const Sidebar = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/upayanmazumder/Smart-Home-System" target="_blank">
+                        <a href="https://github.com/upayanmazumder/Smart-Home-System" target="_blank" rel="noreferrer">
                             <i class="fas fa-code-branch"></i>
                             <span>
                                 Repository
@@ -41,7 +41,7 @@ const Sidebar = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="/login">
+                        <a href="/auth/login">
                             <i class="fas fa-sign-in-alt"></i>
                             <span>
                                 Login
