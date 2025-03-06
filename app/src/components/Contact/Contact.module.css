@@ -1,0 +1,110 @@
+.contactForm {
+    background-color: var(--form-background-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+.contactForm .formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm label {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-size: 1em;
+    color: #cfcfcf;
+    align-self: flex-start;
+}
+
+@media (prefers-color-scheme: light) {
+    .contactForm label {
+        color: rgb(64, 64, 64);
+    }
+}
+
+.contactForm input[type="text"],
+.contactForm input[type="email"],
+.contactForm textarea {
+    background-color: #d7d7d718;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.contactForm input[type="text"]:focus,
+.contactForm input[type="email"]:focus,
+.contactForm textarea:focus {
+    border-color: #3b82f6;
+}
+
+.contactForm button {
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contactForm button:hover {
+    background-color: #2563eb;
+}
+
+.contactForm p {
+    text-align: start;
+}
+
+.contactForm p a {
+    margin-top: 10px;
+    text-align: center;
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contactForm p a:hover {
+    color: #2563eb;
+}
+
+@media (max-width: 600px) {
+    .contactForm {
+        padding: 15px;
+    }
+
+    .contactForm input[type="text"],
+    .contactForm input[type="email"],
+    .contactForm textarea {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .contactForm button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
