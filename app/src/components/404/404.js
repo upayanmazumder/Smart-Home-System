@@ -5,7 +5,7 @@ export default function Home() {
         <main>
             <h1>404</h1>
             <p>The page you are looking for does not exist!</p>
-            <img src={img404} alt="404" />
+            <img src={img404} alt="404 Not Found" />
         </main>
     );
 }
