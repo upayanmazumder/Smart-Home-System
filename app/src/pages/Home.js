@@ -24,7 +24,7 @@ function App() {
           <Partners />
         </section>
       </main>
-
+    
       <Products/>
 
       <main>

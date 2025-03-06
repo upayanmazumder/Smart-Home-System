@@ -1,4 +1,4 @@
-.faq-box {
+.faqBox {
     font-family: 'Roboto', sans-serif;
     list-style: none;
     max-width: 600px;
@@ -11,11 +11,11 @@
     gap: 30px;
 }
 
-.faq-container details {
+.faqContainer details {
     padding: 0.8rem 0;
 }
 
-.faq-container summary {
+.faqContainer summary {
     font-size: 1.2rem;
     font-weight: 500;
     cursor: pointer;
@@ -24,15 +24,15 @@
     transition: color 0.3s ease-in-out;
 }
 
-.faq-container summary::marker {
+.faqContainer summary::marker {
     font-size: 1.5rem;
 }
 
-.faq-container summary:focus {
+.faqContainer summary:focus {
     outline: none;
 }
 
-.faq-container p {
+.faqContainer p {
     margin-top: 0.5rem;
     font-size: 1rem;
     color: var(--text-color);
@@ -40,12 +40,12 @@
     opacity: 0.9;
 }
 
-.faq-container details[open] summary {
+.faqContainer details[open] summary {
     color: var(--text-color);
     font-weight: bold;
 }
 
-.faq-container details[open] p {
+.faqContainer details[open] p {
     animation: fadeIn 0.4s ease-in-out;
 }
 

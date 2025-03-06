@@ -1,21 +1,22 @@
-import "./Counter.css";
+import counterStyles from "./Counter.module.css";
 
 const Carousel = () => {
     return (            
-    <div class="counter-container">
-        <div class="counter">
+    <div className={counterStyles.counterContainer}>
+        <div className={counterStyles.counter}>
             <span>2174</span>
-            <div class="label">Users</div>
+            <div className={counterStyles.label}>Users</div>
         </div>
-        <div class="counter">
+        <div className={counterStyles.counter}>
             <span>4879</span>
-            <div class="label">Devices</div>
+            <div className={counterStyles.label}>Devices</div>
         </div>
-        <div class="counter">
+        <div className={counterStyles.counter}>
             <span>1023</span>
-            <div class="label">Rooms</div>
+            <div className={counterStyles.label}>Rooms</div>
         </div>
-    </div>)
+    </div>
+    );
 }
 
 export default Carousel;

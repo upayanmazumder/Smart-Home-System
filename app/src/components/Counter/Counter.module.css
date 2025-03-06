@@ -1,4 +1,4 @@
-.counter-container {
+.counterContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,7 +8,7 @@
     margin: auto;
 }
 
-.counter-container:hover {
+.counterContainer:hover {
     cursor: default;
 }
 
@@ -44,20 +44,20 @@
     font-size: 0.8em;
 }
 
-.counter-container:hover .counter {
+.counterContainer:hover .counter {
     border-color: rgb(45, 45, 45);
     box-shadow: rgb(73 142 241 / 23%) 0px 0px 18px 5px;
 }
 
 
 @media (prefers-color-scheme: light) {
-    .counter-container:hover .counter {
+    .counterContainer:hover .counter {
         border-color: rgb(202, 202, 202);
     }
 }
 
 @media (max-width: 768px) {
-    .counter-container {
+    .counterContainer {
         max-width: 90vw;
     }
 
@@ -69,7 +69,7 @@
 }
 
 @media (max-width: 480px) {
-    .counter-container {
+    .counterContainer {
         max-width: 100vw;
     }
 

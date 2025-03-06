@@ -1,4 +1,4 @@
-#products {
+.products {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,16 +6,15 @@
     width: 100vw;
     overflow: hidden;
     position: relative;
-    background-color: #020202ab;
     color: #e0e0e0;
 }
 
-#products h2,
-#products p {
+.products h2,
+.products p {
     text-align: center;
 }
 
-.product-container {
+.productContainer {
     height: 100vh;
     width: 100%;
     overflow-y: scroll;
@@ -82,12 +81,12 @@
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
-.product-content {
+.productContent {
     text-align: center;
     max-width: 600px;
 }
 
-.product-name {
+.productName {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     opacity: 0;
@@ -96,7 +95,7 @@
     color: #ffffff;
 }
 
-.product-description {
+.productDescription {
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 2rem;
@@ -106,7 +105,7 @@
     color: #b0b0b0;
 }
 
-.shop-link {
+.shopLink {
     display: inline-block;
     padding: 12px 24px;
     background-color: #3498db;
@@ -120,15 +119,15 @@
     transition: opacity 0.5s ease 0.4s, transform 0.5s ease 0.4s, background-color 0.3s ease;
 }
 
-.shop-link:hover {
+.shopLink:hover {
     background-color: #2980b9;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
 }
 
-.product.active .product-name,
-.product.active .product-description,
-.product.active .shop-link {
+.product.active .productName,
+.product.active .productDescription,
+.product.active .shopLink {
     opacity: 1;
     transform: translateY(0);
 }
@@ -142,26 +141,24 @@
     animation: fadeIn 0.8s ease forwards;
 }
 
-/* Scrollbar styling */
-.product-container::-webkit-scrollbar {
+.productContainer::-webkit-scrollbar {
     width: 8px;
 }
 
-.product-container::-webkit-scrollbar-track {
+.productContainer::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.product-container::-webkit-scrollbar-thumb {
+.productContainer::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 4px;
 }
 
-.product-container::-webkit-scrollbar-thumb:hover {
+.productContainer::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Navigation dots */
-.scroll-indicator {
+.scrollIndicator {
     position: fixed;
     right: 20px;
     top: 50%;
@@ -171,7 +168,7 @@
     gap: 10px;
 }
 
-.scroll-dot {
+.scrollDot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -180,7 +177,7 @@
     transition: all 0.3s ease;
 }
 
-.scroll-dot.active {
+.scrollDot.active {
     background-color: #3498db;
     transform: scale(1.3);
 }
@@ -225,7 +222,7 @@
 }
 
 .shop:hover {
-background-color: #333;
-transform: translateY(-3px);
-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    background-color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }

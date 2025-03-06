@@ -89,49 +89,49 @@
     font-family: system-ui;
 }
 
-.star-1,
-.star-2,
-.star-3,
-.star-4,
-.star-5,
-.star-6 {
+.star1,
+.star2,
+.star3,
+.star4,
+.star5,
+.star6 {
     position: absolute;
     filter: drop-shadow(0 0 0 #fffdef);
     z-index: -5;
     transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
 }
 
-.star-1 {
+.star1 {
     top: 20%;
     left: 20%;
     width: 25px;
 }
 
-.star-2 {
+.star2 {
     top: 45%;
     left: 45%;
     width: 15px;
 }
 
-.star-3 {
+.star3 {
     top: 40%;
     left: 40%;
     width: 5px;
 }
 
-.star-4 {
+.star4 {
     top: 20%;
     left: 40%;
     width: 8px;
 }
 
-.star-5 {
+.star5 {
     top: 25%;
     left: 45%;
     width: 15px;
 }
 
-.star-6 {
+.star6 {
     top: 5%;
     left: 50%;
     width: 5px;
@@ -143,42 +143,42 @@
     box-shadow: 0 0 25px #1e90ff8c;
 }
 
-.hero button:hover .star-1 {
+.hero button:hover .star1 {
     top: -80%;
     left: -30%;
     filter: drop-shadow(0 0 10px #fffdef);
     z-index: 2;
 }
 
-.hero button:hover .star-2 {
+.hero button:hover .star2 {
     top: -25%;
     left: 10%;
     filter: drop-shadow(0 0 10px #fffdef);
     z-index: 2;
 }
 
-.hero button:hover .star-3 {
+.hero button:hover .star3 {
     top: 55%;
     left: 25%;
     filter: drop-shadow(0 0 10px #fffdef);
     z-index: 2;
 }
 
-.hero button:hover .star-4 {
+.hero button:hover .star4 {
     top: 30%;
     left: 80%;
     filter: drop-shadow(0 0 10px #fffdef);
     z-index: 2;
 }
 
-.hero button:hover .star-5 {
+.hero button:hover .star5 {
     top: 25%;
     left: 115%;
     filter: drop-shadow(0 0 10px #fffdef);
     z-index: 2;
 }
 
-.hero button:hover .star-6 {
+.hero button:hover .star6 {
     top: 5%;
     left: 60%;
     filter: drop-shadow(0 0 10px #fffdef);

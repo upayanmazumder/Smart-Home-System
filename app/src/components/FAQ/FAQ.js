@@ -1,14 +1,10 @@
-import "./FAQ.css";
+import faqStyles from "./FAQ.module.css";
 
 const FAQ = () => {
     return (
         <div>
-        <a class="sectionHeading" href="/#faq">
-            <h2>FAQ</h2>
-            <p>Frequently Asked Questions</p>
-        </a>
-        <ul class="faq-box">
-            <div class="faq-container">
+        <ul className={faqStyles.faqBox}>
+            <div className={faqStyles.faqContainer}>
                 <details>
                     <summary>How do I set up the smart home system?</summary>
                     <p>
