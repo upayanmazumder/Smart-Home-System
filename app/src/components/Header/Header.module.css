@@ -1,9 +1,9 @@
-#header {
+.header {
     display: contents;
     position: sticky;
 }
 
-header {
+.header {
     position: sticky;
     top: 0;
     display: flex;
@@ -11,7 +11,6 @@ header {
     align-items: center;
     background-color: var(--header-background-color);
     padding: 10px 0;
-    z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
     transition: all 0.3s ease-in-out;
     animation: slideDown 0.5s ease-in-out;
@@ -20,35 +19,35 @@ header {
     z-index: 1000;
 }
 
-header .branding {
+.header .branding {
     display: flex;
     flex-direction: row;
 }
 
-header .branding a {
+.header .branding a {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-header .branding img {
+.header .branding img {
     margin-right: 10px;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out;
 }
 
-header nav ul {
+.header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-header nav ul li {
+.header nav ul li {
     margin: 0 10px;
 }
 
-header nav ul li a {
+.header nav ul li a {
     text-decoration: none;
     color: #ffffffc4;
     font-size: 1rem;
@@ -57,12 +56,12 @@ header nav ul li a {
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-header nav ul li a:hover {
+.header nav ul li a:hover {
     background-color: var(--link-text-color);
     color: #ffffff;
 }
 
-header .auth {
+.auth {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -73,13 +72,13 @@ header .auth {
     margin-right: 30px;
 }
 
-header .auth img {
+.auth img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
 
-header .auth .details {
+.auth .details {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -92,7 +91,7 @@ header .details h3 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header nav ul {
+    .header nav ul {
         flex-direction: row;
         align-items: flex-start;
         background-color: #1e1e1e;
@@ -100,17 +99,17 @@ header .details h3 {
         border-radius: 5px;
     }
 
-    header nav ul li {
+    .header nav ul li {
         margin: 5px 0;
     }
 
-    header {
+    .header {
         flex-wrap: wrap;
     }
 }
 
 @media (max-width: 480px) {
-    header {
+    .header {
         display: none;
     }
 
