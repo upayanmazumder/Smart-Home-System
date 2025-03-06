@@ -14,11 +14,10 @@ const productImages = {
 
 const Products = () => {
     return (
-        <>  
+        <div className={productStyles.container}>  
             <div className={productStyles.productContainer}>
                 {productsData.map((product, index) => (
-                    <div key={index} className={productStyles.product}>
-                        <ul>
+                    <ul key={index} className={productStyles.product}>
                             <img src={productImages[product.name]} alt={product.name} className={productStyles.productImage}></img>
                             <div className={productStyles.productContent}>
                                 <h3 className={productStyles.productName}>{product.name}</h3>
@@ -27,8 +26,7 @@ const Products = () => {
                                 </p>
                                 <a href={`/shop/${product.name.toLowerCase().replace(/ /g, '-')}`} className={productStyles.shopLink}>Shop Now</a>
                             </div>
-                        </ul>
-                    </div>
+                    </ul>
                 ))}
             </div>
             <br />
@@ -36,7 +34,7 @@ const Products = () => {
                 Check out other products
             </button>
             <br />
-        </>
+        </div>
     )
 }
 

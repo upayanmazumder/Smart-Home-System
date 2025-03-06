@@ -1,10 +1,4 @@
 .header {
-    display: contents;
-    position: sticky;
-}
-
-.header {
-    position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
