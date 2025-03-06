@@ -3,7 +3,7 @@
     padding: var(--padding-medium) var(--padding-medium) var(--padding-medium) 0;
     max-width: var(--screen-horizontal-margin);
     position: fixed;
-    background: linear-gradient(to bottom, transparent 20%, rgba(73, 73, 73, 0.51) 80%, transparent);
+    background: linear-gradient(to bottom, transparent 20%, rgba(73, 73, 73, 0.315) 80%, transparent);
     width: 50px;
     height: 100vh;
     z-index: 999;

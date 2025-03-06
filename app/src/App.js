@@ -18,12 +18,14 @@ function App() {
           <Routes>
             <Route path="login" element={<LoginPage />} />
             <Route path="signup" element={<SignupPage />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         } />
         <Route path="/p/*" element={
           <Routes>
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="terms-of-service" element={<TermsOfService />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         } />
         <Route path="/contact" element={<ContactPage />} />

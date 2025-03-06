@@ -2,7 +2,7 @@
     padding: var(--padding-large) calc(3 * var(--padding-large));
     display: flex;
     flex-direction: row;
-    min-height: 60vh;
+    min-height: 45vh;
     align-items: center;
     margin: 0 !important;
 }

@@ -11,7 +11,7 @@
     backdrop-filter: blur(10px);
     width: 100vw;
     z-index: 1000 !important;
-    position: fixed;
+    position: relative;
 }
 
 .header .branding {
