@@ -1,0 +1,5 @@
+services:
+  web:
+    image: ghcr.io/upayanmazumder/smart-home-system/api:latest
+    ports:
+      - "5000:5000"
