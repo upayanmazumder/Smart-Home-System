@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'RedHatDisplay';
+    src: url('/public/fonts/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
+  }
+
 .container {
     text-align: center;
+    font-family: 'RedHatDisplay';
 }
 
 .productContainer {
@@ -9,7 +15,6 @@
     overflow-y: auto;
     height: 100vh;
     scroll-snap-type: y mandatory;
-    scrollbar-width: none;
     -ms-overflow-style: none;
     padding: 0;
     gap: 0;
@@ -120,6 +125,7 @@
     transition: background 0.3s ease-in-out;
     margin-top: 20px;
     font-size: 1.2rem;
+    font-family: 'RedHatDisplay';
 }
 
 .shop:hover {

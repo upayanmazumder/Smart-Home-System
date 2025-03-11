@@ -1,6 +1,6 @@
 import sidebarStyles from "./Sidebar.module.css";
 
-import {BsDropbox, BsGithub, BsHouse, BsHouseFill, BsStar, BsStarFill } from "react-icons/bs";
+import {BsDropbox, BsGithub, BsHouseFill, BsStarFill } from "react-icons/bs";
 import { BiSolidLogIn } from "react-icons/bi";
 
 const Sidebar = () => {
