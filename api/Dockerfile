@@ -11,9 +11,6 @@ RUN npm install
 # Copy the local code to the container image
 COPY . .
 
-# Build
-RUN npm run build
-
 # Expose port 5000 to external traffic
 EXPOSE 5000
 
