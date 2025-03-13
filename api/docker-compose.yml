@@ -1,5 +1,12 @@
+version: "3.8"
+
 services:
   web:
     image: ghcr.io/upayanmazumder/smart-home-system/api:latest
     ports:
       - "5000:5000"
+    volumes:
+      - smart-home-system:/api/data/users
+
+volumes:
+  smart-home-system:

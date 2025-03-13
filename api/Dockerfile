@@ -1,18 +1,16 @@
-# Use the official Node.js image
-FROM node:latest
+FROM node:18-alpine
 
-# Create and change to the api directory
 WORKDIR /api
 
-# Copy package manifests and install dependencies
-COPY package.json ./
-RUN npm install
+COPY package.json package-lock.json ./
+RUN npm install --only=production
 
-# Copy the local code to the container image
 COPY . .
 
-# Expose port 5000 to external traffic
+# Ensure the data directory exists
+RUN mkdir -p /api/data/users
+
+# Expose port 5000
 EXPOSE 5000
 
-# Start the Node.js server
-CMD ["node", "server"]
+CMD ["node", "server.js"]
