@@ -1,18 +1,13 @@
 const express = require("express");
-const cors = require("cors");
 const bodyParser = require("body-parser");
-const connectDB = require("./config/db");
-const authRoutes = require("./routes/authRoutes");
+const authRoutes = require("./routes/auth");
 
-connectDB();
 const app = express();
+const PORT = 3000;
 
-app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
+app.use("/auth", authRoutes);
 
-app.use("/api/auth", authRoutes);
-
-app.get("/", (req, res) => res.send("Server Running..."));
-
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on http://0.0.0.0:${PORT}`);
+});
