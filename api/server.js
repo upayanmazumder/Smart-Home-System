@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const authRoutes = require("./routes/auth");
 
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
 app.use(bodyParser.json());
 app.use("/auth", authRoutes);
