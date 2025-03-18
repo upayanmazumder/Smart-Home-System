@@ -1,6 +1,6 @@
 # Smart Home System
 
-![Smart Home System Banner](https://smart-home-system.upayan.dev/public/icons/icon-48x48.png)
+![Smart Home System Banner](./app/public/icons/icon-48x48.png)
 
 [![Docker Image CI for smart-home-system.upayan.dev](https://github.com/upayanmazumder/Smart-Home-System/actions/workflows/smart-home-system_app.yml/badge.svg)](https://github.com/upayanmazumder/Smart-Home-System/actions/workflows/smart-home-system_app.yml)
 
