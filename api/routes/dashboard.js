@@ -3,7 +3,6 @@ const router = express.Router();
 
 const generateSmartHomeData = () => {
     return {
-        timestamp: new Date().toISOString(),
         devices: {
             thermostat: {
                 temperature: (18 + Math.random() * 10).toFixed(1), // 18-28°C
@@ -46,8 +45,7 @@ const generateSmartHomeData = () => {
 };
 
 router.get("/", (req, res) => {
-    const count = parseInt(req.query.count) || 10; // Allow generating multiple datasets
-    const data = Array.from({ length: count }, generateSmartHomeData);
+    const data = generateSmartHomeData(); // Generate a single feed of random data
     res.json(data);
 });
 
