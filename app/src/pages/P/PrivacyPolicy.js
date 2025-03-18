@@ -3,7 +3,7 @@ const PrivacyPolicy = () => {
     return (
         <main>
             <a class="sectionHeading" href="#">
-                <h2>Privacy Policy</h2>
+                <h1>Privacy Policy</h1>
                 <p>Please adhere to our Privacy Policy</p>
             </a>
             <section>

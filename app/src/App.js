@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import NotFound from "./components/404/404";
 import LoginPage from "./pages/Auth/Login";
 import SignupPage from "./pages/Auth/Signup";
-import Dashboard from "./pages/Dashboard";
+import DashboardPage from "./pages/DashboardPage";
 import ContactPage from "./pages/ContactPage";
 import PrivacyPolicy from "./pages/P/PrivacyPolicy";
 import TermsOfService from "./pages/P/TermsOfService";
@@ -29,7 +29,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         } />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

@@ -10,6 +10,7 @@ function App() {
   return (
     <>
       <main>
+        <h1>Home</h1>
         <div className="ellipsis" style={{ top: '50px', right: '50px' }}></div>
         <div className="ellipsis ellipsis-green" style={{ top: '800px', right: '20px' }}></div>
         <div className="ellipsis ellipsis-purple" style={{ top: '2500px', right: '50px' }}></div>

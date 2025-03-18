@@ -6,7 +6,7 @@ const ContactPage = () => {
         <main>
             <div className="ellipsis" style={{ top: '50px', right: '50px' }}></div>
             <a class="sectionHeading" href="#">
-                <h2>Contact</h2>
+                <h1>Contact</h1>
             </a>
             <Contact />
         </main>

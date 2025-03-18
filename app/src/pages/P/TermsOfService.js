@@ -3,7 +3,7 @@ const TermsOfService = () => {
     return (
         <main>
             <a class="sectionHeading" href="#">
-                <h2>Terms of Service</h2>
+                <h1>Terms of Service</h1>
                 <p>Please adhere to our Terms of Service</p>
             </a>
             <section>
