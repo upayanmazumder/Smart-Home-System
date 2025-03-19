@@ -1,51 +1,56 @@
-:root {
-    --bg-color: #1a1a1a;
-    --card-bg: #262626;
-    --text-color: #ffffff;
-    --accent-color: #00c6ff;
-    --border-radius: 10px;
-  }
-  
-  .dashboard {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    min-height: 100vh;
-    padding: 20px;
-    font-family: "Arial", sans-serif;
-  }
-  
-  .heading {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .grid {
+.dashboard {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    padding: 20px;
+    color: #ffffff;
+    min-height: 70vh;
   }
   
   .card {
-    background: var(--card-bg);
+    background: #1e1e1e;
     padding: 20px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 15px;
   }
   
   .card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
   }
   
-  h2 {
-    color: var(--accent-color);
+  .icon {
+    font-size: 2rem;
+    color: #126bbf;
+  }
+  
+  .content h2 {
+    font-size: 1.5rem;
     margin-bottom: 10px;
   }
   
-  .loading {
-    text-align: center;
+  .progressBar {
+    width: 100%;
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background: #126bbf;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .loader {
     font-size: 1.5rem;
-    margin-top: 50px;
+    color: #126bbf;
+    text-align: center;
+    margin-top: 20px;
   }
   

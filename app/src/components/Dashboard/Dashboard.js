@@ -1,112 +1,88 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import styles from "./Dashboard.module.css";
-import { FaTemperatureHigh, FaSun, FaCloudSun, FaWifi, FaBatteryFull, FaThermometerHalf } from "react-icons/fa";
-import { AiOutlineBulb, AiOutlineSecurityScan } from "react-icons/ai";
-import { GiSmartphone } from "react-icons/gi";
+import { FaTemperatureHigh, FaTint, FaLightbulb, FaLock, FaBatteryFull, FaCouch, FaTv, FaWind } from "react-icons/fa";
+import { IoMdVolumeHigh, IoMdVolumeOff } from "react-icons/io";
+import { BsThermometerHalf } from "react-icons/bs";
 
 const Dashboard = () => {
   const [data, setData] = useState(null);
 
-  // Function to fetch data from API
-  const fetchData = async () => {
-    try {
-      const response = await fetch("https://api.smart-home-system.upayan.dev/dashboard");
-      const result = await response.json();
-      setData(result);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
-  // Fetch data every 5 seconds
   useEffect(() => {
-    fetchData();
-    const intervalId = setInterval(fetchData, 5000);
-    return () => clearInterval(intervalId);
+    fetch("https://api.smart-home-system.upayan.dev/dashboard")
+      .then((res) => res.json())
+      .then((data) => setData(data.devices))
+      .catch((err) => console.error("Error fetching data:", err));
   }, []);
 
-  if (!data) {
-    return <div className={styles.loading}>Loading...</div>;
-  }
-
-  const {
-    devices = {},
-    lighting = {},
-    security = {},
-    energy = {},
-    smartSpeakers = [],
-    appliances = {},
-    airQuality = {},
-  } = data;
+  if (!data) return <div className={styles.loader}>Loading...</div>;
 
   return (
     <div className={styles.dashboard}>
-      <div className={styles.grid}>
-        {/* Thermostat */}
-        <div className={styles.card}>
-          <h2><FaTemperatureHigh /> Thermostat</h2>
-          <p>Temperature: {devices?.thermostat?.temperature ?? "N/A"}°C</p>
-          <p>Humidity: {devices?.thermostat?.humidity ?? "N/A"}%</p>
-          <p>Mode: {devices?.thermostat?.mode ?? "N/A"}</p>
+      {/* Thermostat Section */}
+      <motion.div className={styles.card} whileHover={{ scale: 1.05 }}>
+        <div className={styles.icon}><FaTemperatureHigh /></div>
+        <div className={styles.content}>
+          <h2>Thermostat</h2>
+          <p><strong>Temperature:</strong> {data.thermostat.temperature}°C</p>
+          <p><strong>Humidity:</strong> {data.thermostat.humidity}%</p>
+          <p><strong>Mode:</strong> {data.thermostat.mode}</p>
         </div>
+      </motion.div>
 
-        {/* Lighting */}
-        <div className={styles.card}>
-          <h2><AiOutlineBulb /> Lighting</h2>
-          <p>Living Room: {lighting?.livingRoom ? "On" : "Off"}</p>
-          <p>Bedroom: {lighting?.bedroom ? "On" : "Off"}</p>
-          <p>Kitchen: {lighting?.kitchen ? "On" : "Off"}</p>
-          <p>Brightness: {lighting?.brightness ?? "N/A"}%</p>
+      {/* Lighting Section */}
+      <motion.div className={styles.card} whileHover={{ scale: 1.05 }}>
+        <div className={styles.icon}><FaLightbulb /></div>
+        <div className={styles.content}>
+          <h2>Lighting</h2>
+          <p><strong>Living Room:</strong> {data.lighting.livingRoom ? "On" : "Off"}</p>
+          <p><strong>Bedroom:</strong> {data.lighting.bedroom ? "On" : "Off"}</p>
+          <p><strong>Kitchen:</strong> {data.lighting.kitchen ? "On" : "Off"}</p>
+          <div className={styles.progressBar}>
+            <div className={styles.progressFill} style={{ width: `${data.lighting.brightness}%` }}></div>
+          </div>
         </div>
+      </motion.div>
 
-        {/* Security */}
-        <div className={styles.card}>
-          <h2><AiOutlineSecurityScan /> Security</h2>
-          <p>Doors Locked: {security?.doorsLocked ? "Yes" : "No"}</p>
-          <p>Motion Detected: {security?.motionDetected ? "Yes" : "No"}</p>
-          <p>Cameras Online: {security?.camerasOnline ? "Yes" : "No"}</p>
-          <p>Alarm Active: {security?.alarmActive ? "Yes" : "No"}</p>
+      {/* Security Section */}
+      <motion.div className={styles.card} whileHover={{ scale: 1.05 }}>
+        <div className={styles.icon}><FaLock /></div>
+        <div className={styles.content}>
+          <h2>Security</h2>
+          <p><strong>Doors Locked:</strong> {data.security.doorsLocked ? "Yes" : "No"}</p>
+          <p><strong>Motion Detected:</strong> {data.security.motionDetected ? "Yes" : "No"}</p>
+          <p><strong>Cameras Online:</strong> {data.security.camerasOnline ? "Yes" : "No"}</p>
+          <p><strong>Alarm Active:</strong> {data.security.alarmActive ? "Yes" : "No"}</p>
         </div>
+      </motion.div>
 
-        {/* Energy */}
-        <div className={styles.card}>
-          <h2><FaSun /> Energy</h2>
-          <p>Total Usage: {energy?.totalUsage ?? "N/A"} kWh</p>
-          <p>Solar Generated: {energy?.solarGenerated ?? "N/A"} kWh</p>
-          <p>Battery Level: {energy?.batteryLevel ?? "N/A"}%</p>
+      {/* Energy Section */}
+      <motion.div className={styles.card} whileHover={{ scale: 1.05 }}>
+        <div className={styles.icon}><FaBatteryFull /></div>
+        <div className={styles.content}>
+          <h2>Energy</h2>
+          <p><strong>Total Usage:</strong> {data.energy.totalUsage} kWh</p>
+          <p><strong>Solar Generated:</strong> {data.energy.solarGenerated} kWh</p>
+          <p><strong>Battery Level:</strong> {data.energy.batteryLevel}%</p>
+          <div className={styles.progressBar}>
+            <div className={styles.progressFill} style={{ width: `${data.energy.batteryLevel}%` }}></div>
+          </div>
         </div>
+      </motion.div>
 
-        {/* Smart Speakers */}
-        <div className={styles.card}>
-          <h2><GiSmartphone /> Smart Speakers</h2>
-          {smartSpeakers.length > 0 ? (
-            smartSpeakers.map((speaker, index) => (
-              <div key={index}>
-                <p>{speaker?.name ?? "Unknown"}: Volume {speaker?.volume ?? "N/A"}</p>
-                <p>Status: {speaker?.playing ? "Playing" : "Idle"}</p>
-              </div>
-            ))
-          ) : (
-            <p>No smart speakers connected</p>
-          )}
-        </div>
-
-        {/* Appliances */}
-        <div className={styles.card}>
-          <h2><FaThermometerHalf /> Appliances</h2>
-          <p>Washing Machine: {appliances?.washingMachine?.running ? "Running" : "Off"} (Cycle: {appliances?.washingMachine?.cycle ?? "N/A"})</p>
-          <p>Oven: {appliances?.oven?.active ? "On" : "Off"} (Temp: {appliances?.oven?.temperature ?? "N/A"}°C)</p>
-          <p>Refrigerator: {appliances?.refrigerator?.temperature ?? "N/A"}°C (Door {appliances?.refrigerator?.doorOpen ? "Open" : "Closed"})</p>
-        </div>
-
-        {/* Air Quality */}
-        <div className={styles.card}>
-          <h2><FaCloudSun /> Air Quality</h2>
-          <p>CO2: {airQuality?.CO2 ?? "N/A"} ppm</p>
-          <p>VOC: {airQuality?.VOC ?? "N/A"} ppm</p>
-          <p>PM2.5: {airQuality?.PM2_5 ?? "N/A"} µg/m³</p>
-        </div>
-      </div>
+      {/* Smart Speakers Section */}
+      {data.smartSpeakers.map((speaker, index) => (
+        <motion.div key={index} className={styles.card} whileHover={{ scale: 1.05 }}>
+          <div className={styles.icon}><FaCouch /></div>
+          <div className={styles.content}>
+            <h2>{speaker.name}</h2>
+            <p><strong>Volume:</strong> {speaker.volume}% {speaker.playing ? <IoMdVolumeHigh /> : <IoMdVolumeOff />}</p>
+            <div className={styles.progressBar}>
+              <div className={styles.progressFill} style={{ width: `${speaker.volume}%` }}></div>
+            </div>
+          </div>
+        </motion.div>
+      ))}
     </div>
   );
 };
