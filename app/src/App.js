@@ -9,6 +9,7 @@ import DashboardPage from "./pages/DashboardPage";
 import ContactPage from "./pages/ContactPage";
 import PrivacyPolicy from "./pages/P/PrivacyPolicy";
 import TermsOfService from "./pages/P/TermsOfService";
+import ForgotPasswordPage from "./pages/Auth/ForgotPassword";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="login" element={<LoginPage />} />
             <Route path="signup" element={<SignupPage />} />
+            <Route path="forgot-password" element={<ForgotPasswordPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         } />

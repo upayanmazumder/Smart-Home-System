@@ -52,23 +52,4 @@ router.post("/login", async (req, res) => {
     res.json({ message: "Login successful", token });
 });
 
-// Forgot Password
-router.post("/forgot-password", (req, res) => {
-    const { email } = req.body;
-    console.log(`Forgot password request: email=${email}`);
-
-    const user = getUserData(email);
-    if (!user) {
-        console.log("Forgot password failed: User not found");
-        return res.status(400).json({ message: "User not found" });
-    }
-
-    const newPassword = Math.random().toString(36).slice(-8);
-    user.password = bcrypt.hashSync(newPassword, 10);
-    saveUserData(email, user);
-
-    console.log(`Password reset successful: email=${email}, newPassword=${newPassword}`);
-    res.json({ message: "Password reset successful", newPassword });
-});
-
 module.exports = router;
