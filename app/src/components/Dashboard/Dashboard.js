@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./Dashboard.module.css";
-import { FaTemperatureHigh, FaTint, FaLightbulb, FaLock, FaBatteryFull, FaCouch, FaTv, FaWind } from "react-icons/fa";
+import { FaTemperatureHigh, FaLightbulb, FaLock, FaBatteryFull, FaCouch} from "react-icons/fa";
 import { IoMdVolumeHigh, IoMdVolumeOff } from "react-icons/io";
-import { BsThermometerHalf } from "react-icons/bs";
+import API_URL from "../../data/api";
 
 const Dashboard = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("https://api.smart-home-system.upayan.dev/dashboard")
+    fetch(`${API_URL}/dashboard`)
       .then((res) => res.json())
       .then((data) => setData(data.devices))
       .catch((err) => console.error("Error fetching data:", err));

@@ -1,24 +1,23 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // For navigation after signup
+import { useNavigate } from "react-router-dom"; 
 import authStyles from "../Auth.module.css";
+import API_URL from "../../../data/api";
 
 const Signup = () => {
     const [formData, setFormData] = useState({ username: "", email: "", password: "" });
-    const [message, setMessage] = useState(""); // Success/error message
+    const [message, setMessage] = useState(""); 
     const navigate = useNavigate();
 
-    // Handle input changes
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setMessage(""); // Reset messages
+        setMessage(""); 
 
         try {
-            const response = await fetch("https://api.smart-home-system.upayan.dev/auth/signup", {
+            const response = await fetch(`${API_URL}/auth/signup`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -32,7 +31,7 @@ const Signup = () => {
 
             if (response.ok) {
                 setMessage("Signup successful! Redirecting...");
-                setTimeout(() => navigate("/auth/login"), 1500); // Redirect after success
+                setTimeout(() => navigate("/auth/login"), 1500); 
             } else {
                 setMessage(data.message || "Signup failed.");
             }

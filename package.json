@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cd app && npm start"
+    "dev": "concurrently \"cd app && npm start\" \"cd api && npm start\""
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/upayanmazumder/Smart-Home-System/issues"
   },
-  "homepage": "https://github.com/upayanmazumder/Smart-Home-System#readme"
+  "homepage": "https://github.com/upayanmazumder/Smart-Home-System#readme",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
 }

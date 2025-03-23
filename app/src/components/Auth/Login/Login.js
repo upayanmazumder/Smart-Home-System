@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import authStyles from "../Auth.module.css";
+import API_URL from "../../../data/api";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -13,7 +14,7 @@ const Login = () => {
         setError("");
 
         try {
-            const response = await fetch("https://api.smart-home-system.upayan.dev/auth/login", {
+            const response = await fetch(`${API_URL}/auth/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),
@@ -22,7 +23,7 @@ const Login = () => {
             const data = await response.json();
             if (response.ok) {
                 alert("Login successful!");
-                navigate("/dashboard"); // Redirect after login
+                navigate("/dashboard");
             } else {
                 setError(data.message || "Login failed");
             }
