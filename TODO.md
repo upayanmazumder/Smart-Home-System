@@ -1,7 +1,11 @@
-- [x] Theme support
-- [x] FAQ Section
-- [x] Contact form
-- [x] Partners section
-- [x] E-commerce integration
-- [x] Accessibility features
-- [x] Authentication
+# TODO
+
+## Will
+
+- [] Better Auth
+
+## Might
+
+- [] Feedback status
+- [] Energy Usage and Savings
+- [] Detect and Personally Greet?
