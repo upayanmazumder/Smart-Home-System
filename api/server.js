@@ -4,6 +4,7 @@ const cors = require("cors");
 
 const authRoutes = require("./routes/auth");
 const dashboardRoutes = require("./routes/dashboard");
+const greetRoutes = require("./routes/greet");
 
 const app = express();
 const PORT = 5000;
@@ -20,6 +21,7 @@ app.use((req, res, next) => {
 
 app.use("/auth", authRoutes);
 app.use("/dashboard", dashboardRoutes);
+app.use("/greet", greetRoutes);
 
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on http://0.0.0.0:${PORT}`);

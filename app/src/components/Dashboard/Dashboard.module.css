@@ -31,6 +31,16 @@
     font-size: 1.5rem;
     margin-bottom: 10px;
   }
+
+  .content p {
+    text-align: left;
+  }
+
+  .div {
+    display: flex;
+    text-align: left !important;
+    justify-content: flex-start;
+  }
   
   .progressBar {
     width: 100%;
