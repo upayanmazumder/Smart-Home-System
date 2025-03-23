@@ -9,10 +9,22 @@ const Dashboard = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(`${API_URL}/dashboard`)
-      .then((res) => res.json())
-      .then((data) => setData(data.devices))
-      .catch((err) => console.error("Error fetching data:", err));
+    // Function to fetch data
+    const fetchData = () => {
+      fetch(`${API_URL}/dashboard`)
+        .then((res) => res.json())
+        .then((data) => setData(data.devices))
+        .catch((err) => console.error("Error fetching data:", err));
+    };
+
+    // Initial fetch
+    fetchData();
+
+    // Set interval to update data every second
+    const intervalId = setInterval(fetchData, 1000);
+
+    // Cleanup interval on unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   if (!data) return <div className={styles.loader}>Loading...</div>;
