@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Greet.module.css"; // Import the CSS module
+import styles from "./Greet.module.css";
+import API_URL from "../../data/api";
 
 const Greet = () => {
   const [greetingMessage, setGreetingMessage] = useState("");
@@ -8,7 +9,7 @@ const Greet = () => {
   useEffect(() => {
     const fetchGreeting = async () => {
       try {
-        const response = await fetch("http://localhost:5000/greet");
+        const response = await fetch(`${API_URL}/greet`);
         if (response.ok) {
           const data = await response.json();
           setGreetingMessage(data.message);
