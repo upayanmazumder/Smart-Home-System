@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react";
+import md5 from "blueimp-md5";
 import headerStyles from "./Header.module.css";
 import logo from "../../media/logo.png";
-import userpfp from "../../media/auth/the-rock.webp";
+import fallbackPfp from "../../media/auth/the-rock.webp";
 import API_URL from "../../data/api";
+
+const getGravatarUrl = (email) => {
+    if (!email) return fallbackPfp;
+    const hash = md5(email.trim().toLowerCase());
+    return `https://www.gravatar.com/avatar/${hash}?d=404`;
+};
 
 const Header = () => {
     const [user, setUser] = useState(() => {
@@ -11,6 +18,7 @@ const Header = () => {
     });
     const [uptime, setUptime] = useState("Fetching...");
     const [showUptime, setShowUptime] = useState(false);
+    const [profilePic, setProfilePic] = useState(fallbackPfp);
 
     useEffect(() => {
         const handleStorageChange = () => {
@@ -40,6 +48,14 @@ const Header = () => {
         return () => clearInterval(interval);
     }, []);
 
+    useEffect(() => {
+        if (user?.email) {
+            setProfilePic(getGravatarUrl(user.email));
+        } else {
+            setProfilePic(fallbackPfp);
+        }
+    }, [user]);
+
     const handleLogout = () => {
         localStorage.removeItem("user");
         localStorage.removeItem("token");
@@ -65,7 +81,11 @@ const Header = () => {
             </div>
             {user ? (
                 <div className={headerStyles.auth}>
-                    <img src={userpfp} alt="User icon" />
+                    <img 
+                        src={profilePic} 
+                        alt="User icon"
+                        onError={() => setProfilePic(fallbackPfp)}
+                    />
                     <div className={headerStyles.details}>
                         <h3>{user.name || "Unknown User"}</h3>
                         <p>{user.email || "No Email"}</p>
@@ -74,9 +94,7 @@ const Header = () => {
                         </button>
                     </div>
                 </div>
-            ) : (
-                <></>
-            )}
+            ) : null}
         </header>
     );
 };
