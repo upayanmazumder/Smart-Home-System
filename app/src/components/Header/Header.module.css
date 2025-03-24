@@ -8,6 +8,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6);
     transition: all 0.3s ease-in-out;
     animation: slideDown 0.5s ease-in-out;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     width: 100vw;
     z-index: 1000 !important;
@@ -82,6 +83,20 @@
 
 header .details h3 {
     margin: 0;
+}
+
+.uptimeTooltip {
+    transform: translateX(-50%);
+    background: rgba(54, 54, 54, 0.62);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: opacity 0.3s ease-in-out;
+    height: min-content;
+    transform: translateX(0px);
+    align-self: center;
 }
 
 /* Responsive Design */
