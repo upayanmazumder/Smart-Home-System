@@ -42,28 +42,26 @@ let lastSmartHomeData = {
     }
 };
 
-const generateSmartHomeData = () => {
-    const randomizeValue = (currentValue, range) => {
-        const step = (Math.random() - 0.5) * range;
-        return parseFloat((currentValue + step).toFixed(1));
-    };
+const randomizeValue = (currentValue, range) => {
+    const step = (Math.random() * range * 2 - range);
+    return parseFloat((currentValue + step).toFixed(1));
+};
 
+const generateSmartHomeData = () => {
     return {
         devices: {
             thermostat: {
                 temperature: randomizeValue(lastSmartHomeData.devices.thermostat.temperature, 0.5),
                 humidity: randomizeValue(lastSmartHomeData.devices.thermostat.humidity, 1),
-                mode: ["cooling", "heating", "off"][
-                    Math.floor(Math.random() * 3)
-                ]
+                mode: ["cooling", "heating", "off"][Math.floor(Math.random() * 3)]
             },
             lighting: {
                 livingRoom: Math.random() > 0.3,
                 bedroom: Math.random() > 0.4,
                 kitchen: Math.random() > 0.2,
-                brightness: parseInt(
+                brightness: Math.min(100, Math.max(0, parseInt(
                     (lastSmartHomeData.devices.lighting.brightness + (Math.random() - 0.5) * 10).toFixed(0)
-                )
+                )))
             },
             security: {
                 doorsLocked: Math.random() > 0.2,
@@ -74,21 +72,17 @@ const generateSmartHomeData = () => {
             energy: {
                 totalUsage: randomizeValue(lastSmartHomeData.devices.energy.totalUsage, 2),
                 solarGenerated: randomizeValue(lastSmartHomeData.devices.energy.solarGenerated, 2),
-                batteryLevel: randomizeValue(lastSmartHomeData.devices.energy.batteryLevel, 1)
+                batteryLevel: Math.max(0, randomizeValue(lastSmartHomeData.devices.energy.batteryLevel, 1))
             },
             smartSpeakers: lastSmartHomeData.devices.smartSpeakers.map(speaker => ({
                 ...speaker,
-                volume: parseInt(
-                    (speaker.volume + (Math.random() - 0.5) * 5).toFixed(0)
-                ),
+                volume: parseInt((speaker.volume + (Math.random() - 0.5) * 5).toFixed(0)),
                 playing: Math.random() > 0.5
             })),
             appliances: {
                 washingMachine: {
                     running: Math.random() > 0.5,
-                    cycle: ["wash", "rinse", "spin", "off"][
-                        Math.floor(Math.random() * 4)
-                    ]
+                    cycle: ["wash", "rinse", "spin", "off"][Math.floor(Math.random() * 4)]
                 },
                 oven: {
                     temperature: randomizeValue(lastSmartHomeData.devices.appliances.oven.temperature, 5),
@@ -107,6 +101,22 @@ const generateSmartHomeData = () => {
         }
     };
 };
+
+// Energy metrics route
+router.get("/energy", (req, res) => {
+    const { totalUsage, solarGenerated, batteryLevel } = lastSmartHomeData.devices.energy;
+
+    const efficiencyRatio = ((solarGenerated / totalUsage) * 100).toFixed(2);
+    const estimatedSavings = (solarGenerated * 0.12).toFixed(2);
+
+    res.json({
+        totalUsage: `${totalUsage} kWh`,
+        solarGenerated: `${solarGenerated} kWh`,
+        batteryLevel: `${batteryLevel}%`,
+        efficiencyRatio: `${efficiencyRatio}%`,
+        estimatedSavings: `$${estimatedSavings}`
+    });
+});
 
 router.get("/", (req, res) => {
     const data = generateSmartHomeData();

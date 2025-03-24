@@ -8,4 +8,4 @@
 
 - [] Feedback status
 - [] Energy Usage and Savings
-- [x] Detect and Personally Greet?
+- [x] Detect and Personally Greet
