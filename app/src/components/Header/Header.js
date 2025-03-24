@@ -2,23 +2,30 @@ import { useEffect, useState } from "react";
 import headerStyles from "./Header.module.css";
 import logo from "../../media/logo.png";
 import userpfp from "../../media/auth/the-rock.webp";
+import API_URL from "../../data/api";
 
 const Header = () => {
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState(() => {
+        const storedUser = JSON.parse(localStorage.getItem("user"));
+        return storedUser && storedUser.name ? storedUser : null;
+    });
     const [uptime, setUptime] = useState("Fetching...");
     const [showUptime, setShowUptime] = useState(false);
 
     useEffect(() => {
-        const storedUser = JSON.parse(localStorage.getItem("user"));
-        if (storedUser?.name && storedUser?.email) {
-            setUser(storedUser);
-        }
+        const handleStorageChange = () => {
+            const storedUser = JSON.parse(localStorage.getItem("user"));
+            setUser(storedUser?.name ? storedUser : null);
+        };
+
+        window.addEventListener("storage", handleStorageChange);
+        return () => window.removeEventListener("storage", handleStorageChange);
     }, []);
 
     useEffect(() => {
         const fetchUptime = async () => {
             try {
-                const response = await fetch("http://localhost:5000/uptime");
+                const response = await fetch(`${API_URL}/uptime`);
                 const data = await response.json();
                 setUptime(data.uptime);
             } catch (error) {
@@ -28,10 +35,17 @@ const Header = () => {
         };
 
         fetchUptime();
-        const interval = setInterval(fetchUptime, 5000); // Refresh uptime every 5s
+        const interval = setInterval(fetchUptime, 5000);
 
         return () => clearInterval(interval);
     }, []);
+
+    const handleLogout = () => {
+        localStorage.removeItem("user");
+        localStorage.removeItem("token");
+        setUser(null);
+        window.location.href = "/auth/login";
+    };
 
     return (
         <header className={headerStyles.header}>
@@ -49,13 +63,20 @@ const Header = () => {
                     </div>
                 )}
             </div>
-            {user && (
+            {user ? (
                 <div className={headerStyles.auth}>
                     <img src={userpfp} alt="User icon" />
                     <div className={headerStyles.details}>
-                        <h3>{user.name}</h3>
-                        <a href="/auth/logout">Logout</a>
+                        <h3>{user.name || "Unknown User"}</h3>
+                        <p>{user.email || "No Email"}</p>
+                        <button onClick={handleLogout} className={headerStyles.logoutButton}>
+                            Logout
+                        </button>
                     </div>
+                </div>
+            ) : (
+                <div className={headerStyles.auth}>
+                    <a href="/auth/login">Login</a>
                 </div>
             )}
         </header>

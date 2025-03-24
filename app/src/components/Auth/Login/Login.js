@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import authStyles from "../Auth.module.css";
 import API_URL from "../../../data/api";
@@ -9,29 +9,44 @@ const Login = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
+    useEffect(() => {
+        const token = localStorage.getItem("token");
+        if (token) {
+            navigate("/dashboard");
+        }
+    }, [navigate]);
+
     const handleLogin = async (e) => {
         e.preventDefault();
         setError("");
-
+    
         try {
             const response = await fetch(`${API_URL}/auth/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),
             });
-
+    
             const data = await response.json();
+            console.log("Login Response:", data);
+    
             if (response.ok) {
+                localStorage.setItem("token", data.token);
+                localStorage.setItem("user", JSON.stringify(data.user));
+    
+                console.log("Stored User:", localStorage.getItem("user"));
+    
                 alert("Login successful!");
                 navigate("/dashboard");
             } else {
                 setError(data.message || "Login failed");
             }
         } catch (err) {
+            console.error("Login Error:", err);
             setError("An error occurred. Please try again.");
         }
     };
-
+    
     return (
         <div className={authStyles.formContainer}>
             <h2 className={authStyles.formHeading}>Login</h2>
