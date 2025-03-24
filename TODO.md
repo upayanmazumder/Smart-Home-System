@@ -7,5 +7,6 @@
 ## Might
 
 - [] Feedback status
-- [] Energy Usage and Savings
+- [x] Energy Usage and Savings
 - [x] Detect and Personally Greet
+- [] Neighbourhood Stats
