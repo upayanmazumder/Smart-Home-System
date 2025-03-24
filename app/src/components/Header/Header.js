@@ -75,9 +75,7 @@ const Header = () => {
                     </div>
                 </div>
             ) : (
-                <div className={headerStyles.auth}>
-                    <a href="/auth/login">Login</a>
-                </div>
+                <></>
             )}
         </header>
     );

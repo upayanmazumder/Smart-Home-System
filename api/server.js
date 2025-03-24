@@ -6,6 +6,7 @@ const authRoutes = require("./routes/auth");
 const dashboardRoutes = require("./routes/dashboard");
 const greetRoutes = require("./routes/greet");
 const uptimeRoutes = require("./routes/uptime");
+const contactRoutes = require("./routes/contact");
 
 const app = express();
 const PORT = 5000;
@@ -28,6 +29,7 @@ app.use("/auth", authRoutes);
 app.use("/dashboard", dashboardRoutes);
 app.use("/greet", greetRoutes);
 app.use("/uptime", uptimeRoutes);
+app.use("/contact", contactRoutes);
 
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on http://0.0.0.0:${PORT}`);
