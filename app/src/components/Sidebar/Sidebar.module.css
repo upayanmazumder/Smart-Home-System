@@ -27,6 +27,7 @@
     color: white;
     display: flex;
     flex-direction: row;
+
 }
 
 .sidebar nav {
@@ -57,8 +58,7 @@
 }
 
 .sidebar nav ul li:hover a svg {
-    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.25);
-    background-color: #1e1e1e78;
+    transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
@@ -70,14 +70,14 @@
 .sidebar nav ul li a span {
     color: transparent;
     background-color: transparent;
-    border-radius: var(--border-radius-small);
+    border-radius: var(--border-radius-small) var(--border-radius-medium) var(--border-radius-medium) var(--border-radius-small);
     transition: all 0.2s ease-in-out;
+    padding: var(--padding-medium);
 }
 
 .sidebar nav ul li:hover a span {
     color: white;
     background-color: rgba(76, 76, 76, 0.774);
-    padding: var(--padding-medium);
 }
 
 @media (prefers-color-scheme: light) {
