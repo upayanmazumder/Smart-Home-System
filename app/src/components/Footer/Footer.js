@@ -27,7 +27,7 @@ const Footer = () => {
                         <a href="/contact" target="_blank">Contact</a>
                         <a href="https://github.com/upayanmazumder/Smart-Home-System" target="_blank" rel="noreferrer">Documentation</a>
                         <a href="https://discord.gg/wQTZcXpcaY" target="_blank" rel="noreferrer">Community</a>
-                        <a href="/contact" target="_blank">Security</a>
+                        <a href="https://github.com/upayanmazumder/Smart-Home-System/security" target="_blank" rel="noreferrer">Security</a>
                         <a href="https://github.com/upayanmazumder/Smart-Home-System" target="_blank" rel="noreferrer">Repository</a>
                     </div>
                 </div>
@@ -43,8 +43,8 @@ const Footer = () => {
                         </a>
                     </div>
                     <div className={FooterStyles.footerButtons}>
-                        <button className={FooterStyles.joinNowButton}>Join now</button>
-                        <button className={FooterStyles.getInTouchButton}>Get in touch</button>
+                        <button className={FooterStyles.joinNowButton} onClick={() => window.location.href = '/auth/signup'}>Join now</button>
+                        <button className={FooterStyles.getInTouchButton} onClick={() => window.location.href = '/contact'}>Get in touch</button>
                         <button className={FooterStyles.goToTop} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>↑</button>
                     </div>
                 </div>
