@@ -1,4 +1,5 @@
 import FooterStyles from "./Footer.module.css";
+import API_URL from "../../data/api";
 
 const Footer = () => {
     return (
@@ -18,7 +19,7 @@ const Footer = () => {
                         <a href="/#products">Features</a>
                         <a href="/#products">Pricing</a>
                         <a href="/#products">Integrations</a>
-                        <a href="/#products">API</a>
+                        <a href={API_URL} target="_blank" rel="noreferrer">API</a>
                         <a href="/#products">Demo</a>
                     </div>
                     <div className={FooterStyles.footerColumn}>

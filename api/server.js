@@ -19,6 +19,10 @@ app.use((req, res, next) => {
     next();
 });
 
+app.get("/", (req, res) => {
+    res.json({ message: "This is the Smart Home System API" });
+});
+
 app.use("/auth", authRoutes);
 app.use("/dashboard", dashboardRoutes);
 app.use("/greet", greetRoutes);
