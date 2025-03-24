@@ -21,13 +21,14 @@ const Header = () => {
     const [profilePic, setProfilePic] = useState(fallbackPfp);
 
     useEffect(() => {
-        const handleStorageChange = () => {
+        const handleUserUpdate = () => {
             const storedUser = JSON.parse(localStorage.getItem("user"));
             setUser(storedUser?.name ? storedUser : null);
         };
 
-        window.addEventListener("storage", handleStorageChange);
-        return () => window.removeEventListener("storage", handleStorageChange);
+        window.addEventListener("userUpdated", handleUserUpdate);
+
+        return () => window.removeEventListener("userUpdated", handleUserUpdate);
     }, []);
 
     useEffect(() => {
@@ -59,6 +60,9 @@ const Header = () => {
     const handleLogout = () => {
         localStorage.removeItem("user");
         localStorage.removeItem("token");
+
+        window.dispatchEvent(new Event("userUpdated"));
+
         setUser(null);
         window.location.href = "/auth/login";
     };
