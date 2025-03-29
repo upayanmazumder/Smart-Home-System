@@ -8,7 +8,7 @@ const Carousel = () => {
             <div className={counterStyles.label}>Users</div>
         </div>
         <div className={counterStyles.counter}>
-            <span>4879</span>
+            <span>4881</span>
             <div className={counterStyles.label}>Devices</div>
         </div>
         <div className={counterStyles.counter}>
