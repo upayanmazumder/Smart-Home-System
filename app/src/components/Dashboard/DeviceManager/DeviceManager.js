@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import API_URL from "../../../data/api";
+import styles from "./DeviceManager.module.css";
 
-export default function DeviceForm() {
+export default function DeviceManager() {
   const [email] = useState(() => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     return storedUser?.email || "";
@@ -12,6 +13,10 @@ export default function DeviceForm() {
   const [status, setStatus] = useState("off");
   const [message, setMessage] = useState("");
   const [devices, setDevices] = useState([]);
+  const [roomDevices, setRoomDevices] = useState({
+    spot1: null,
+    spot2: null,
+  });
 
   const fetchDevices = useCallback(async () => {
     if (!email) return;
@@ -82,8 +87,28 @@ export default function DeviceForm() {
     }
   };
 
+  // Handle drag and drop for devices
+  const handleDragStart = (e, deviceId) => {
+    e.dataTransfer.setData("deviceId", deviceId);
+  };
+
+  const handleDrop = (e, spotId) => {
+    const draggedDeviceId = e.dataTransfer.getData("deviceId");
+    const device = devices.find((device) => device.id === draggedDeviceId);
+    if (!device || roomDevices[spotId]) return; // Prevent dropping if there's already a device in the spot
+
+    setRoomDevices((prevState) => ({
+      ...prevState,
+      [spotId]: device, // Set the device in the specified spot
+    }));
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div>
+    <div className={styles.container}>
       <h2>Add</h2>
       {message && <p>{message}</p>}
       <form onSubmit={handleSubmit}>
@@ -114,11 +139,17 @@ export default function DeviceForm() {
 
       <h2>Devices</h2>
       {devices.length > 0 ? (
-        <ul>
+        <ul className={styles.deviceList}>
           {devices.map((device) => (
-            <li key={device.id}>
+            <li
+              key={device.id}
+              className={styles.deviceItem}
+              draggable
+              onDragStart={(e) => handleDragStart(e, device.id)}
+              onDragOver={handleDragOver}
+            >
               <span>
-                {device.name} ({device.type}) - {device.status}
+                {device.name} - {device.status}
               </span>
               <button
                 onClick={() =>
@@ -140,6 +171,16 @@ export default function DeviceForm() {
       ) : (
         <p>No devices found.</p>
       )}
+
+      <h2>Room</h2>
+      <div className={styles.room} onDragOver={handleDragOver}>
+        <div className={styles.roomSpot} onDrop={(e) => handleDrop(e, "spot1")}>
+          {roomDevices.spot1 && <span>{roomDevices.spot1.name}</span>}
+        </div>
+        <div className={styles.roomSpot} onDrop={(e) => handleDrop(e, "spot2")}>
+          {roomDevices.spot2 && <span>{roomDevices.spot2.name}</span>}
+        </div>
+      </div>
     </div>
   );
 }
