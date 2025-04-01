@@ -1,92 +1,93 @@
 .container {
-    background-color: #121212;
-    color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  h2 {
-    color: #e0e0e0;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  select, input, button {
-    padding: 10px;
-    margin: 5px 0;
-    background-color: #333333;
-    border: 1px solid #444;
-    color: #ffffff;
-    border-radius: 4px;
-  }
-  
-  button {
-    cursor: pointer;
-    background-color: #6200ea;
-    border-color: #6200ea;
-  }
-  
-  button:hover {
-    background-color: #3700b3;
-  }
-  
-  .deviceList {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .deviceItem {
-    background-color: #333;
-    padding: 15px;
-    border-radius: 8px;
-    cursor: move;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .deviceItem button {
-    background-color: #f44336;
-  }
-  
-  .deviceItem button:hover {
-    background-color: #d32f2f;
-  }
-  
-  .deviceItem span {
-    color: #ffffff;
-    font-weight: bold;
-  }
-  
-  .room {
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-radius: 10px;
-    min-height: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    border: 2px dashed #6200ea;
-  }
-  
-  .roomSpot {
-    background-color: #333;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 8px;
-    width: 150px;
-    height: 150px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  background-color: #121212;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #e0e0e0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+select,
+input,
+button {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #333333;
+  border: 1px solid #444;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #6200ea;
+  border-color: #6200ea;
+}
+
+button:hover {
+  background-color: #3700b3;
+}
+
+.deviceList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.deviceItem {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: move;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.deviceItem button {
+  background-color: #f44336;
+}
+
+.deviceItem button:hover {
+  background-color: #d32f2f;
+}
+
+.deviceItem span {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.room {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 2px dashed #6200ea;
+}
+
+.roomSpot {
+  background-color: #333;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

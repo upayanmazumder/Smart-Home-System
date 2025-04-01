@@ -87,7 +87,6 @@ export default function DeviceManager() {
     }
   };
 
-  // Handle drag and drop for devices
   const handleDragStart = (e, deviceId) => {
     e.dataTransfer.setData("deviceId", deviceId);
   };
@@ -95,11 +94,11 @@ export default function DeviceManager() {
   const handleDrop = (e, spotId) => {
     const draggedDeviceId = e.dataTransfer.getData("deviceId");
     const device = devices.find((device) => device.id === draggedDeviceId);
-    if (!device || roomDevices[spotId]) return; // Prevent dropping if there's already a device in the spot
+    if (!device || roomDevices[spotId]) return;
 
     setRoomDevices((prevState) => ({
       ...prevState,
-      [spotId]: device, // Set the device in the specified spot
+      [spotId]: device,
     }));
   };
 
@@ -174,12 +173,24 @@ export default function DeviceManager() {
 
       <h2>Room</h2>
       <div className={styles.room} onDragOver={handleDragOver}>
-        <div className={styles.roomSpot} onDrop={(e) => handleDrop(e, "spot1")}>
-          {roomDevices.spot1 && <span>{roomDevices.spot1.name}</span>}
-        </div>
-        <div className={styles.roomSpot} onDrop={(e) => handleDrop(e, "spot2")}>
-          {roomDevices.spot2 && <span>{roomDevices.spot2.name}</span>}
-        </div>
+        {Array.from({ length: 5 }).map((_, rowIndex) => (
+          <div key={rowIndex} className={styles.roomRow}>
+            {Array.from({ length: 5 }).map((_, colIndex) => {
+              const spotId = `spot-${rowIndex}-${colIndex}`;
+              return (
+                <div
+                  key={spotId}
+                  className={styles.roomSpot}
+                  onDrop={(e) => handleDrop(e, spotId)}
+                >
+                  {roomDevices[spotId] && (
+                    <span>{roomDevices[spotId].name}</span>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        ))}
       </div>
     </div>
   );
