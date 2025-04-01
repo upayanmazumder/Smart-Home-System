@@ -1,11 +1,9 @@
-import AddDevice from "./Device/Add/Add";
-import UpdateDevice from "./Device/Update/Update";
+import DeviceManager from "./DeviceManager/DeviceManager";
 
 export default function Dashboard() {
   return (
     <>
-      <AddDevice />
-      <UpdateDevice />
+      <DeviceManager />
     </>
   );
 }
