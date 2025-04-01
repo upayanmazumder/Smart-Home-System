@@ -3,6 +3,7 @@
   color: #c9d1d9;
   padding: 20px;
   border-radius: 8px;
+  margin-bottom: 100px;
 }
 
 .container h2 {
@@ -44,6 +45,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 
 .deviceItem {

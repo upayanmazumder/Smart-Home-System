@@ -123,9 +123,9 @@
 }
 
 .uptimeTooltip {
-    position: absolute;
+    position: fixed;
     top: 100%;
-    left: 50%;
+    left: 10%;
     transform: translateX(-50%);
     background: rgba(54, 54, 54, 0.62);
     color: #fff;
@@ -168,7 +168,7 @@
         justify-content: flex-end;
         padding: 8px 12px;
     }
-    
+
     .auth .details {
         min-width: auto;
     }
@@ -202,6 +202,7 @@
     from {
         transform: translateY(-100%);
     }
+
     to {
         transform: translateY(0);
     }
