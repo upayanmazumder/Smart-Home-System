@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import API_URL from "../../../data/api";
 import styles from "./DeviceManager.module.css";
+import { FaToggleOff, FaToggleOn, FaRecycle } from "react-icons/fa";
 
 export default function DeviceManager() {
   const [email] = useState(() => {
@@ -160,9 +161,7 @@ export default function DeviceManager() {
               onDragStart={(e) => handleDragStart(e, device.id, null)}
               onDragOver={handleDragOver}
             >
-              <span>
-                {device.name} - {device.status}
-              </span>
+              <span>{device.name}</span>
               <button
                 onClick={() =>
                   handleUpdate(
@@ -172,10 +171,10 @@ export default function DeviceManager() {
                   )
                 }
               >
-                Toggle Status
+                {device.status === "on" ? <FaToggleOn /> : <FaToggleOff />}
               </button>
               <button onClick={() => handleDelete(device.id)}>
-                Delete Device
+                <FaRecycle />
               </button>
             </li>
           ))}

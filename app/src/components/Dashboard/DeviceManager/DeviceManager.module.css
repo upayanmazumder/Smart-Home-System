@@ -5,20 +5,20 @@
   border-radius: 8px;
 }
 
-h2 {
+.container h2 {
   color: #58a6ff;
 }
 
-form {
+.container h2 {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-select,
-input,
-button {
+.container select,
+.container input,
+.container button {
   padding: 10px;
   margin: 5px 0;
   background-color: #161b22;
@@ -27,14 +27,14 @@ button {
   border-radius: 4px;
 }
 
-button {
+.container button {
   cursor: pointer;
   background-color: #238636;
-  border-color: #238636;
+  border: 0;
   color: #ffffff;
 }
 
-button:hover {
+.container button:hover {
   background-color: #2ea043;
 }
 
@@ -57,11 +57,15 @@ button:hover {
 }
 
 .deviceItem button {
-  background-color: #da3633;
+  background-color: transparent;
 }
 
 .deviceItem button:hover {
-  background-color: #f85149;
+  background-color: transparent;
+}
+
+.deviceItem svg {
+  font-size: 20px;
 }
 
 .deviceItem span {
