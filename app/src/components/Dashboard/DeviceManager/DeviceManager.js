@@ -13,10 +13,8 @@ export default function DeviceManager() {
   const [status, setStatus] = useState("off");
   const [message, setMessage] = useState("");
   const [devices, setDevices] = useState([]);
-  const [roomDevices, setRoomDevices] = useState({
-    spot1: null,
-    spot2: null,
-  });
+  const [roomDevices, setRoomDevices] = useState({});
+  const [droppedDevices, setDroppedDevices] = useState(new Set());
 
   const fetchDevices = useCallback(async () => {
     if (!email) return;
@@ -87,19 +85,34 @@ export default function DeviceManager() {
     }
   };
 
-  const handleDragStart = (e, deviceId) => {
+  const handleDragStart = (e, deviceId, spotId) => {
     e.dataTransfer.setData("deviceId", deviceId);
+    e.dataTransfer.setData("spotId", spotId);
   };
 
-  const handleDrop = (e, spotId) => {
+  const handleDrop = (e, targetSpotId) => {
     const draggedDeviceId = e.dataTransfer.getData("deviceId");
+    const draggedSpotId = e.dataTransfer.getData("spotId");
     const device = devices.find((device) => device.id === draggedDeviceId);
-    if (!device || roomDevices[spotId]) return;
 
-    setRoomDevices((prevState) => ({
-      ...prevState,
-      [spotId]: device,
-    }));
+    if (!device || targetSpotId === draggedSpotId) return;
+
+    setRoomDevices((prevState) => {
+      const newState = { ...prevState };
+
+      if (draggedSpotId) {
+        delete newState[draggedSpotId];
+      }
+
+      newState[targetSpotId] = device;
+      return newState;
+    });
+
+    setDroppedDevices((prevState) => {
+      const newSet = new Set(prevState);
+      newSet.add(draggedDeviceId);
+      return newSet;
+    });
   };
 
   const handleDragOver = (e) => {
@@ -143,8 +156,8 @@ export default function DeviceManager() {
             <li
               key={device.id}
               className={styles.deviceItem}
-              draggable
-              onDragStart={(e) => handleDragStart(e, device.id)}
+              draggable={!droppedDevices.has(device.id)}
+              onDragStart={(e) => handleDragStart(e, device.id, null)}
               onDragOver={handleDragOver}
             >
               <span>
@@ -177,15 +190,21 @@ export default function DeviceManager() {
           <div key={rowIndex} className={styles.roomRow}>
             {Array.from({ length: 5 }).map((_, colIndex) => {
               const spotId = `spot-${rowIndex}-${colIndex}`;
+              const deviceInSpot = roomDevices[spotId];
               return (
                 <div
                   key={spotId}
                   className={styles.roomSpot}
                   onDrop={(e) => handleDrop(e, spotId)}
+                  onDragOver={handleDragOver}
+                  draggable={!!deviceInSpot}
+                  onDragStart={
+                    deviceInSpot
+                      ? (e) => handleDragStart(e, deviceInSpot.id, spotId)
+                      : null
+                  }
                 >
-                  {roomDevices[spotId] && (
-                    <span>{roomDevices[spotId].name}</span>
-                  )}
+                  {deviceInSpot && <span>{deviceInSpot.name}</span>}
                 </div>
               );
             })}
