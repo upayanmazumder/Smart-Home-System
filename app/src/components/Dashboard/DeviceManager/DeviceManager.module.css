@@ -1,12 +1,12 @@
 .container {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: #0d1117;
+  color: #c9d1d9;
   padding: 20px;
   border-radius: 8px;
 }
 
 h2 {
-  color: #e0e0e0;
+  color: #58a6ff;
 }
 
 form {
@@ -21,20 +21,21 @@ input,
 button {
   padding: 10px;
   margin: 5px 0;
-  background-color: #333333;
-  border: 1px solid #444;
-  color: #ffffff;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
   border-radius: 4px;
 }
 
 button {
   cursor: pointer;
-  background-color: #6200ea;
-  border-color: #6200ea;
+  background-color: #238636;
+  border-color: #238636;
+  color: #ffffff;
 }
 
 button:hover {
-  background-color: #3700b3;
+  background-color: #2ea043;
 }
 
 .deviceList {
@@ -46,7 +47,7 @@ button:hover {
 }
 
 .deviceItem {
-  background-color: #333;
+  background-color: #161b22;
   padding: 15px;
   border-radius: 8px;
   cursor: move;
@@ -56,31 +57,31 @@ button:hover {
 }
 
 .deviceItem button {
-  background-color: #f44336;
+  background-color: #da3633;
 }
 
 .deviceItem button:hover {
-  background-color: #d32f2f;
+  background-color: #f85149;
 }
 
 .deviceItem span {
-  color: #ffffff;
+  color: #c9d1d9;
   font-weight: bold;
 }
 
 .room {
-  background-color: #1e1e1e;
+  background-color: #0d1117;
   padding: 20px;
   border-radius: 10px;
   min-height: 300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  border: 2px dashed #6200ea;
+  border: 2px dashed #58a6ff;
 }
 
 .roomSpot {
-  background-color: #333;
+  background-color: #161b22;
   padding: 15px;
   margin: 10px;
   border-radius: 8px;
@@ -90,4 +91,10 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+}
+
+.roomSpot:hover {
+  background-color: #21262d;
 }
