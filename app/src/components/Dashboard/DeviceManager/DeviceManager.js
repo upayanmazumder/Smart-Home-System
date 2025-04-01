@@ -68,6 +68,20 @@ export default function DeviceForm() {
     }
   };
 
+  const handleDelete = async (deviceId) => {
+    try {
+      const response = await axios.delete(`${API_URL}/device`, {
+        data: { email, deviceId },
+      });
+
+      setMessage(response.data.message);
+      fetchDevices();
+    } catch (error) {
+      console.error("Error deleting device:", error);
+      setMessage("Failed to delete device.");
+    }
+  };
+
   return (
     <div>
       <h2>Add</h2>
@@ -116,6 +130,9 @@ export default function DeviceForm() {
                 }
               >
                 Toggle Status
+              </button>
+              <button onClick={() => handleDelete(device.id)}>
+                Delete Device
               </button>
             </li>
           ))}
